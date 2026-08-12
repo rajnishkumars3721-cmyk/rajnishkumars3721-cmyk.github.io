@@ -1,1 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAJNISH PRIME - Study Smarter</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        body {
+            background-color: #0b0f19;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Navbar */
+        nav {
+            width: 100%;
+            max-width: 500px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            background-color: #4f46e5;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            padding: 8px 14px;
+            border-radius: 10px;
+        }
+
+        .brand-name {
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        /* Badge */
+        .badge {
+            background: rgba(79, 70, 229, 0.15);
+            border: 1px solid rgba(99, 102, 241, 0.4);
+            color: #818cf8;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        /* Hero Text */
+        .hero-title {
+            font-size: 36px;
+            font-weight: 900;
+            text-align: center;
+            line-height: 1.2;
+            margin-bottom: 15px;
+        }
+
+        .hero-title span {
+            color: #6366f1;
+        }
+
+        .hero-subtitle {
+            color: #9ca3af;
+            text-align: center;
+            font-size: 14px;
+            max-width: 400px;
+            line-height: 1.5;
+            margin-bottom: 30px;
+        }
+
+        /* Buttons */
+        .btn-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            width: 100%;
+            max-width: 350px;
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 14px;
+            border-radius: 12px;
+            border: none;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background-color: #6366f1;
+            color: white;
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            border: 1px solid #374151;
+            color: white;
+        }
+
+        /* Stats */
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            max-width: 400px;
+            margin-bottom: 50px;
+            border-top: 1px solid #1f2937;
+            padding-top: 20px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 20px;
+            font-weight: 800;
+        }
+
+        .stat-label {
+            font-size: 11px;
+            color: #6b7280;
+            margin-top: 4px;
+        }
+
+        /* Apps Section */
+        .section-title {
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .card {
+            background-color: #111827;
+            border: 1px solid #1f2937;
+            border-radius: 16px;
+            padding: 20px;
+            width: 100%;
+            max-width: 400px;
+            margin-bottom: 20px;
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 12px;
+        }
+
+        .card-icon {
+            width: 50px;
+            height: 50px;
+            background: white;
+            color: black;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 18px;
+        }
+
+        .card-title {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .card-desc {
+            color: #9ca3af;
+            font-size: 13px;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        .card-badge {
+            display: inline-block;
+            background: rgba(16, 185, 129, 0.1);
+            color: #10b981;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div style="display: flex; align-items: center; gap: 10px;">
+            <div class="logo">R</div>
+            <div class="brand-name">RAJNISH PRIME</div>
+        </div>
+    </nav>
+
+    <!-- Hero Badge -->
+    <div class="badge">
+        <span>●</span> 100% Free · Premium Courses Unlocked
+    </div>
+
+    <!-- Hero Content -->
+    <h1 class="hero-title">
+        Study Smarter.<br>
+        Pay <span>Nothing.</span>
+    </h1>
+
+    <p class="hero-subtitle">
+        Access premium paid courses from top ed-tech platforms — completely free. All your favourite educators, one place.
+    </p>
+
+    <!-- Action Buttons -->
+    <div class="btn-container">
+        <a href="#apps" class="btn btn-primary">🚀 Explore Apps</a>
+        <a href="https://telegram.org" class="btn btn-secondary">📢 Join Community</a>
+    </div>
+
+    <!-- Stats Bar -->
+    <div class="stats">
+        <div class="stat-item">
+            <div class="stat-number">1000+</div>
+            <div class="stat-label">BATCHES</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">3</div>
+            <div class="stat-label">PLATFORMS</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">₹0</div>
+            <div class="stat-label">COST</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">24/7</div>
+            <div class="stat-label">ACCESS</div>
+        </div>
+    </div>
+
+    <!-- Apps List Section -->
+    <div id="apps" class="section-title">Explore Our Apps</div>
+
+    <!-- App Card 1 -->
+    <div class="card">
+        <div class="card-header">
+            <div class="card-icon">PW</div>
+            <div class="card-title">Physics Wallah</div>
+        </div>
+        <div class="card-desc">
+            India's most loved ed-tech. Board prep & competitive exams by star educators.
+        </div>
+        <div class="card-badge">• LIVE BATCHES AVAILABLE</div>
+    </div>
+
+    <!-- App Card 2 -->
+    <div class="card">
+        <div class="card-header">
+            <div class="card-icon" style="background:#10b981; color:white;">NT</div>
+            <div class="card-title">Next Toppers</div>
+        </div>
+        <div class="card-desc">
+            Crack competitive exams with high-quality free video lectures and notes.
+        </div>
+        <div class="card-badge">• LIVE BATCHES AVAILABLE</div>
+    </div>
+
+</body>
+</html>
 
