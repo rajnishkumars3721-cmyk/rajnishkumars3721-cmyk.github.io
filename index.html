@@ -1,20 +1,14 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>Rajnish APK</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>RAJNISH PRIME</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      -webkit-tap-highlight-color: transparent;
-    }
-
+    * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
     body {
       background-color: #0b0f19;
       color: #ffffff;
@@ -23,120 +17,179 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 24px 16px;
+      padding: 30px 16px;
     }
 
-    /* Header Profile Section */
-    .profile-header {
+    /* Top Profile & Branding */
+    .hero-section {
       text-align: center;
-      margin-bottom: 30px;
+      max-width: 480px;
+      margin-bottom: 35px;
     }
-
     .main-logo {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid #f59e0b;
-      box-shadow: 0 0 20px rgba(245, 158, 11, 0.4);
+      width: 90px; height: 90px; border-radius: 50%; object-fit: cover;
+      border: 3px solid #6366f1; box-shadow: 0 0 25px rgba(99, 102, 241, 0.4); margin-bottom: 16px;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(99, 102, 241, 0.15);
+      border: 1px solid rgba(99, 102, 241, 0.4);
+      color: #818cf8;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 30px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
       margin-bottom: 14px;
     }
-
-    .welcome-text {
-      font-size: 14px;
+    .hero-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 34px;
+      font-weight: 800;
+      line-height: 1.15;
+      color: #ffffff;
+      margin-bottom: 12px;
+    }
+    .hero-title span {
+      background: linear-gradient(135deg, #818cf8 0%, #c084fc 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-desc {
       color: #94a3b8;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    /* Section Header */
+    .section-header {
+      width: 100%; max-width: 480px;
+      margin-bottom: 16px;
+    }
+    .section-tag {
+      font-size: 11px;
+      color: #818cf8;
       text-transform: uppercase;
       letter-spacing: 1px;
-      font-weight: 600;
+      font-weight: 700;
       margin-bottom: 4px;
     }
-
-    .app-title {
+    .section-heading {
       font-family: 'Syne', sans-serif;
-      font-size: 32px;
+      font-size: 22px;
       font-weight: 800;
-      color: #f59e0b;
-      margin-bottom: 8px;
     }
 
-    .tagline {
-      color: #cbd5e1;
-      font-size: 13px;
-      font-weight: 500;
+    /* Vertical Cards Layout (jaise screenshot mein hai) */
+    .cards-container {
+      width: 100%; max-width: 480px;
+      display: flex; flex-direction: column; gap: 16px;
     }
-
-    .tagline span {
-      color: #f59e0b;
-      font-weight: 700;
-    }
-
-    /* Cards Grid Layout (2 columns) */
-    .grid-container {
-      width: 100%;
-      max-width: 480px;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-      margin-bottom: 30px;
-    }
-
-    .card {
+    .app-card {
       background: #111827;
       border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 20px;
-      padding: 20px 14px;
-      text-align: center;
+      padding: 20px;
       text-decoration: none;
       color: inherit;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      gap: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      transition: border-color 0.2s;
     }
-
+    .app-card:hover {
+      border-color: rgba(129, 140, 248, 0.4);
+    }
+    .card-top {
+      display: flex; align-items: center; gap: 14px;
+    }
     .card-icon {
-      width: 64px;
-      height: 64px;
-      border-radius: 16px;
-      object-fit: cover;
-      margin-bottom: 12px;
-      border: 2px solid #f59e0b;
+      width: 54px; height: 54px; border-radius: 14px; object-fit: cover;
+      border: 2px solid rgba(255,255,255,0.1); flex-shrink: 0;
     }
-
+    .card-info {
+      flex-grow: 1;
+    }
     .card-title {
       font-family: 'Syne', sans-serif;
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 700;
       color: #ffffff;
+      margin-bottom: 2px;
+    }
+    .card-subtitle {
+      font-size: 12px;
+      color: #94a3b8;
+      line-height: 1.4;
+    }
+    .live-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: #34d399;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 5px 12px;
+      border-radius: 20px;
+      align-self: flex-start;
+    }
+    .live-dot {
+      width: 6px; height: 6px; background-color: #34d399; border-radius: 50%;
+      box-shadow: 0 0 8px #34d399;
     }
   </style>
 </head>
 <body>
 
-  <!-- Profile & Header -->
-  <header class="profile-header">
-    <img src="ChatGPT Image Aug 12, 2026, 08_08_06 AM.png" alt="Rajnish Profile" class="main-logo" />
-    <p class="welcome-text">Welcome to</p>
-    <h1 class="app-title">Rajnish APK</h1>
-    <p class="tagline">Education Must Be <span>Free</span> For Everyone</p>
+  <!-- Hero Section -->
+  <header class="hero-section">
+    <img src="ChatGPT Image Aug 12, 2026, 08_08_06 AM.png" alt="Rajnish Profile" class="main-logo">
+    <div class="badge">100% Free • Premium Courses Unlocked</div>
+    <h1 class="hero-title">Welcome to <span>RAJNISH PRIME</span></h1>
+    <p class="hero-desc">Pick your platform and get instant free access to all premium batches. Education must be free for everyone.</p>
   </header>
 
-  <!-- Apps Grid Section -->
-  <main class="grid-container">
+  <!-- Section Title -->
+  <div class="section-header">
+    <p class="section-tag">Official Platforms</p>
+    <h2 class="section-heading">Explore Our Apps</h2>
+  </div>
+
+  <!-- Apps List -->
+  <main class="cards-container">
     
-    <!-- Next Topper -->
-    <a href="#" class="card">
-      <img src="nt1.png" alt="Next Topper" class="card-icon" />
-      <h3 class="card-title">Next Toppers</h3>
+    <!-- Physics Wallah Card -->
+    <a href="#" class="app-card">
+      <div class="card-top">
+        <img src="pw1.png" alt="Physics Wallah" class="card-icon">
+        <div class="card-info">
+          <h3 class="card-title">Physics Wallah</h3>
+          <p class="card-subtitle">India's most loved ed-tech. IIT JEE, NEET, and board prep by top educators.</p>
+        </div>
+      </div>
+      <div class="live-badge">
+        <span class="live-dot"></span> LIVE BATCHES AVAILABLE
+      </div>
     </a>
 
-    <!-- Physics Wallah -->
-    <a href="#" class="card">
-      <img src="pw1.png" alt="Physics Wallah" class="card-icon" />
-      <h3 class="card-title">Physics Wallah</h3>
+    <!-- Next Toppers Card -->
+    <a href="#" class="app-card">
+      <div class="card-top">
+        <img src="nt1.png" alt="Next Toppers" class="card-icon">
+        <div class="card-info">
+          <h3 class="card-title">Next Toppers</h3>
+          <p class="card-subtitle">Crack competitive exams with high-quality structured content and modules.</p>
+        </div>
+      </div>
+      <div class="live-badge">
+        <span class="live-dot"></span> LIVE BATCHES AVAILABLE
+      </div>
     </a>
 
   </main>
 
 </body>
 </html>
+ 
