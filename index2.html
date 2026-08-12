@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Rajnish Prime</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      background-color: #0b0f19;
+      color: #ffffff;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 16px;
+    }
+
+    /* Header Navigation */
+    header {
+      width: 100%;
+      max-width: 480px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0 30px 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand img {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .brand-name {
+      font-family: 'Syne', sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    .menu-btn {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      padding: 8px 12px;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    /* Main Hero Section */
+    .hero {
+      width: 100%;
+      max-width: 480px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Badge */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(99, 102, 241, 0.1);
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      color: #a5b4fc;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 25px;
+    }
+
+    .badge-dot {
+      width: 8px;
+      height: 8px;
+      background-color: #6366f1;
+      border-radius: 50%;
+      box-shadow: 0 0 8px #6366f1;
+    }
+
+    /* Hero Text */
+    .hero-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 38px;
+      line-height: 1.1;
+      font-weight: 800;
+      margin-bottom: 18px;
+      letter-spacing: -1px;
+    }
+
+    .hero-title span {
+      color: #f59e0b;
+    }
+
+    .hero-subtitle {
+      color: #94a3b8;
+      font-size: 15px;
+      line-height: 1.5;
+      margin-bottom: 30px;
+      padding: 0 10px;
+    }
+
+    /* Action Buttons */
+    .btn-group {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+
+    .btn-primary {
+      background: #4f46e5;
+      color: #ffffff;
+      padding: 14px;
+      border-radius: 12px;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 4px 20px rgba(79, 70, 229, 0.4);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #ffffff;
+      padding: 14px;
+      border-radius: 12px;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    /* Stats Grid */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      width: 100%;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 20px 0;
+      margin-bottom: 40px;
+    }
+
+    .stat-item h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 18px;
+      font-weight: 800;
+    }
+
+    .stat-item p {
+      font-size: 10px;
+      color: #64748b;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-top: 4px;
+    }
+
+    /* Section Title */
+    .section-header {
+      width: 100%;
+      text-align: left;
+      margin-bottom: 20px;
+    }
+
+    .section-tag {
+      color: #6366f1;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .section-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 28px;
+      font-weight: 800;
+    }
+
+    .section-desc {
+      color: #94a3b8;
+      font-size: 14px;
+      margin-top: 6px;
+    }
+
+    /* Cards */
+    .cards-wrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    .card {
+      background: #111827;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 24px;
+      text-align: left;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    .card-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 16px;
+      object-fit: cover;
+      margin-bottom: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .card-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .card-text {
+      color: #94a3b8;
+      font-size: 13px;
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+
+    .card-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: #10b981;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .status-dot {
+      width: 6px;
+      height: 6px;
+      background-color: #10b981;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <header>
+    <div class="brand">
+      <img src="main-logo.png" alt="Logo" />
+      <span class="brand-name">rajnishprime</span>
+    </div>
+    <button class="menu-btn">☰</button>
+  </header>
+
+  <main class="hero">
+    <!-- Top Badge -->
+    <div class="badge">
+      <span class="badge-dot"></span>
+      100% Free • Premium Courses Unlocked
+    </div>
+
+    <!-- Main Heading -->
+    <h1 class="hero-title">
+      Study Smarter.<br>
+      Pay <span>Nothing.</span>
+    </h1>
+
+    <p class="hero-subtitle">
+      Access premium paid courses from India's top ed-tech platforms — completely free. All your favourite educators, one place.
+    </p>
+
+    <!-- Buttons -->
+    <div class="btn-group">
+      <a href="#apps" class="btn-primary">🚀 Explore Apps</a>
+      <a href="#" class="btn-secondary">📢 Join Community</a>
+    </div>
+
+    <!-- Stats Bar -->
+    <div class="stats-grid">
+      <div class="stat-item">
+        <h3>1000+</h3>
+        <p>Batches</p>
+      </div>
+      <div class="stat-item">
+        <h3>3</h3>
+        <p>Platforms</p>
+      </div>
+      <div class="stat-item">
+        <h3>₹0</h3>
+        <p>Cost</p>
+      </div>
+      <div class="stat-item">
+        <h3>24/7</h3>
+        <p>Access</p>
+      </div>
+    </div>
+
+    <!-- App Section Header -->
+    <div class="section-header" id="apps">
+      <span class="section-tag">— OFFICIAL PLATFORMS</span>
+      <h2 class="section-title">Explore Our Apps</h2>
+      <p class="section-desc">Pick your platform and get instant free access to all premium batches.</p>
+    </div>
+
+    <!-- App Cards -->
+    <div class="cards-wrapper">
+      
+      <!-- Physics Wallah -->
+      <a href="#" class="card">
+        <img src="pw1.png" alt="PW Logo" class="card-icon" />
+        <h3 class="card-title">Physics Wallah</h3>
+        <p class="card-text">India's most loved ed-tech. Board prep & competitive exams by star educators.</p>
+        <div class="card-status">
+          <span class="status-dot"></span>
+          LIVE BATCHES AVAILABLE
+        </div>
+      </a>
+
+      <!-- Next Toppers -->
+      <a href="#" class="card">
+        <img src="nt1.png" alt="NT Logo" class="card-icon" />
+        <h3 class="card-title">Next Toppers</h3>
+        <p class="card-text">Crack competitive exams with high-quality free video lectures and notes.</p>
+        <div class="card-status">
+          <span class="status-dot"></span>
+          LIVE BATCHES AVAILABLE
+        </div>
+      </a>
+
+    </div>
+  </main>
+
+</body>
+</html>
