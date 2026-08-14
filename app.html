@@ -91,8 +91,13 @@
       from { transform: translateY(100%); }
       to { transform: translateY(0); }
     }
-    .modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
-    .modal-header h3 { font-family: 'Syne', sans-serif; font-size: 20px; font-weight: 800; }
+    .modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+    
+    /* MODAL HEADER IMAGE & TITLE STYLING */
+    .modal-title-box { display: flex; align-items: center; gap: 12px; }
+    .modal-logo { width: 38px; height: 38px; border-radius: 10px; object-fit: cover; border: 1px solid rgba(255,255,255,0.15); }
+    .modal-title-box h3 { font-family: 'Syne', sans-serif; font-size: 20px; font-weight: 800; color: #ffffff; }
+
     .close-btn { background: rgba(255,255,255,0.1); border: none; color: #fff; width: 32px; height: 32px; border-radius: 50%; font-size: 16px; cursor: pointer; }
     
     .batch-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 15px; }
@@ -154,7 +159,7 @@
         <div class="live-badge"><span class="live-dot"></span> LIVE BATCHES AVAILABLE</div>
       </a>
 
-      <!-- NEXT TOPPERS (CARD THAT OPENS POPUP BATCHES) -->
+      <!-- NEXT TOPPERS (CLICKABLE CARD) -->
       <div class="app-card" onclick="openBatchesModal()">
         <div class="app-card-top">
           <img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg" alt="Next Toppers" class="app-icon">
@@ -216,11 +221,14 @@
     </div>
   </div>
 
-  <!-- BATCHES POPUP MODAL -->
+  <!-- BATCHES POPUP MODAL (WITH IMAGE) -->
   <div class="modal-overlay" id="batchModal">
     <div class="modal-content">
       <div class="modal-header">
-        <h3>Next Toppers Batches</h3>
+        <div class="modal-title-box">
+          <img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg" alt="Next Toppers Logo" class="modal-logo">
+          <h3>Next Toppers Batches</h3>
+        </div>
         <button class="close-btn" onclick="closeBatchesModal()">✕</button>
       </div>
       <p style="color: #94a3b8; font-size: 13px;">Select your batch to start studying directly without popups:</p>
@@ -233,7 +241,7 @@
         <a href="https://studypanda.live/nexttoppers/107" target="_blank" class="batch-btn">Batch 107</a>
         <a href="https://studypanda.live/nexttoppers/108" target="_blank" class="batch-btn">Batch 108</a>
         <a href="https://studypanda.live/nexttoppers/123" target="_blank" class="batch-btn">Batch 123</a>
-        <a href="https://studypanda.live/nexttoppers/110" target="_btn" class="batch-btn">Batch 110</a>
+        <a href="https://studypanda.live/nexttoppers/110" target="_blank" class="batch-btn">Batch 110</a>
         <a href="https://studypanda.live/nexttoppers/112" target="_blank" class="batch-btn">Batch 112</a>
         <a href="https://studypanda.live/nexttoppers/178" target="_blank" class="batch-btn">Batch 178</a>
         <a href="https://studypanda.live/nexttoppers/124" target="_blank" class="batch-btn">Batch 124</a>
@@ -260,5 +268,5 @@
   </script>
 
 </body>
-            </html>
-            
+  </html>
+                                                                                                       
