@@ -42,7 +42,6 @@
     .btn-group { display: flex; flex-direction: column; gap: 10px; margin-bottom: 30px; }
     .btn { width: 100%; padding: 13px; border-radius: 14px; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 15px; font-weight: 700; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 10px; transition: all 0.3s ease; }
     
-    /* Updated Attractive Explore Button Styles */
     .btn-primary { 
       background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 50%, #6366f1 100%); 
       color: #ffffff; 
@@ -158,7 +157,7 @@
       <img src="ChatGPT Image Aug 12, 2026, 08_08_06 AM.png" alt="Logo" class="nav-logo-img">
       <span class="nav-title">RAJNISH PRIME 2</span>
     </a>
-    <div class="menu-btn">
+    <div class="menu-btn" onclick="vibratePhone(30)">
       <span></span><span></span><span></span>
     </div>
   </nav>
@@ -171,10 +170,10 @@
     <p>Access premium paid courses from India's top ed-tech platforms — completely free. All your favourite educators, one place.</p>
     
     <div class="btn-group">
-      <a href="#apps" class="btn btn-primary">🚀 Explore Apps</a>
-      <a href="https://t.me/freestudybach2027" target="_blank" class="btn btn-telegram">✈️ Join Telegram Channel</a>
-      <a href="https://whatsapp.com/channel/0029VbDI4yFK5cDHjEHcNk16" target="_blank" class="btn btn-whatsapp">📢 Join WhatsApp Channel</a>
-      <a href="https://youtube.com/@rajnishstudyshorts?si=mPxFar33SZb9pHjA" target="_blank" class="btn btn-youtube">📺 Subscribe YouTube</a>
+      <a href="#apps" class="btn btn-primary" onclick="vibratePhone(40)">🚀 Explore Apps</a>
+      <a href="https://t.me/freestudybach2027" target="_blank" class="btn btn-telegram" onclick="vibratePhone(40)">✈️ Join Telegram Channel</a>
+      <a href="https://whatsapp.com/channel/0029VbDI4yFK5cDHjEHcNk16" target="_blank" class="btn btn-whatsapp" onclick="vibratePhone(40)">📢 Join WhatsApp Channel</a>
+      <a href="https://youtube.com/@rajnishstudyshorts?si=mPxFar33SZb9pHjA" target="_blank" class="btn btn-youtube" onclick="vibratePhone(40)">📺 Subscribe YouTube</a>
     </div>
   </header>
 
@@ -192,7 +191,7 @@
 
     <div class="apps-list">
       <!-- Physics Wallah -->
-      <a href="https://pwthor.live/study/batches" target="_blank" class="app-card">
+      <a href="https://pwthor.live/study/batches" target="_blank" class="app-card" onclick="vibratePhone(35)">
         <div class="app-card-top">
           <img src="pw1.png" alt="Physics Wallah" class="app-icon">
           <div class="app-info">
@@ -204,7 +203,7 @@
       </a>
 
       <!-- NEXT TOPPERS -->
-      <div class="app-card" onclick="openBatchesModal()">
+      <div class="app-card" onclick="vibratePhone(35); openBatchesModal();">
         <div class="app-card-top">
           <img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg" alt="Next Toppers" class="app-icon">
           <div class="app-info">
@@ -216,7 +215,7 @@
       </div>
 
       <!-- Mission JEET -->
-      <a href="https://studypanda.live/missionjeet" target="_blank" class="app-card">
+      <a href="https://studypanda.live/missionjeet" target="_blank" class="app-card" onclick="vibratePhone(35)">
         <div class="app-card-top">
           <img src="https://i.ibb.co/G4kQkcTh/Screenshot-20260811-183043-2.jpg" alt="Mission JEET" class="app-icon">
           <div class="app-info">
@@ -228,7 +227,7 @@
       </a>
 
       <!-- Unacademy -->
-      <a href="https://studypanda.live/una" target="_blank" class="app-card">
+      <a href="https://studypanda.live/una" target="_blank" class="app-card" onclick="vibratePhone(35)">
         <div class="app-card-top">
           <img src="https://i.ibb.co/NdK48RqM/Screenshot-20260811-183136-2.jpg" alt="Unacademy" class="app-icon">
           <div class="app-info">
@@ -240,7 +239,7 @@
       </a>
 
       <!-- Rwa -->
-      <a href="https://studypanda.live/rwa" target="_blank" class="app-card">
+      <a href="https://studypanda.live/rwa" target="_blank" class="app-card" onclick="vibratePhone(35)">
         <div class="app-card-top">
           <img src="https://i.ibb.co/wh5CY8Ds/Screenshot-20260811-183211-2.jpg" alt="Rwa" class="app-icon">
           <div class="app-info">
@@ -252,7 +251,7 @@
       </a>
 
       <!-- Selection Way -->
-      <a href="https://selectionwayy.vercel.app" target="_blank" class="app-card">
+      <a href="https://selectionwayy.vercel.app" target="_blank" class="app-card" onclick="vibratePhone(35)">
         <div class="app-card-top">
           <img src="https://i.ibb.co/nMk354fp/logo.png" alt="Selection Way" class="app-icon">
           <div class="app-info">
@@ -273,36 +272,42 @@
           <img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg" alt="Next Toppers Logo" class="modal-logo">
           <h3>Next Toppers Batches</h3>
         </div>
-        <button class="close-btn" onclick="closeBatchesModal()">✕</button>
+        <button class="close-btn" onclick="vibratePhone(20); closeBatchesModal();">✕</button>
       </div>
       <p style="color: #94a3b8; font-size: 13px;">Select your batch to start studying directly without popups:</p>
       
       <div class="batch-grid">
-        <a href="https://studypanda.live/nexttoppers/183" target="_blank" class="batch-card"><img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg"><span>Batch 183 • Summer Camp</span></a>
-        <a href="https://studypanda.live/nexttoppers/111" target="_blank" class="batch-card"><img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg"><span>Batch 111 • Sci 12th PRO</span></a>
-        <a href="https://studypanda.live/nexttoppers/176" target="_blank" class="batch-card"><img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg"><span>Batch 176 • Hum 11th</span></a>
-        <a href="https://studypanda.live/nexttoppers/109" target="_blank" class="batch-card"><img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg"><span>Batch 109 • Comm CUET 12th</span></a>
-        <a href="https://studypanda.live/nexttoppers/107" target="_blank" class="batch-card"><img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg"><span>Batch 107 • Nirbhay 8th</span></a>
-        <a href="https://studypanda.live/nexttoppers/108" target="_blank" class="batch-card"><img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg"><span>Batch 108 • Comm 12th PRO</span></a>
-        <a href="https://studypanda.live/nexttoppers/123" target="_blank" class="batch-card"><img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg"><span>Batch 123 • Comm 11th</span></a>
-        <a href="https://studypanda.live/nexttoppers/110" target="_blank" class="batch-card"><img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg"><span>Batch 110 • Comm 12th</span></a>
-        <a href="https://studypanda.live/nexttoppers/112" target="_blank" class="batch-card"><img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg"><span>Batch 112 • Nirmaan 2.0 (8th)</span></a>
-        <a href="https://studypanda.live/nexttoppers/178" target="_blank" class="batch-card"><img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg"><span>Batch 178 • Hum CUET 12th</span></a>
-        <a href="https://studypanda.live/nexttoppers/124" target="_blank" class="batch-card"><img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg"><span>Batch 124 • Sci CUET 12th</span></a>
-        <a href="https://studypanda.live/nexttoppers/177" target="_blank" class="batch-card"><img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg"><span>Batch 177 • Comm Plus 11th</span></a>
-        <a href="https://studypanda.live/nexttoppers/179" target="_blank" class="batch-card"><img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg"><span>Batch 179 • Hum Plus 11th</span></a>
-        <a href="https://studypanda.live/nexttoppers/192" target="_blank" class="batch-card"><img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg"><span>Batch 192 • Sci 11th</span></a>
-        <a href="https://studypanda.live/nexttoppers/190" target="_blank" class="batch-card"><img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg"><span>Batch 190 • Sci Plus 11th</span></a>
-        <a href="https://studypanda.live/nexttoppers/193" target="_blank" class="batch-card"><img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg"><span>Batch 193 • Olympiad NSEJS</span></a>
-        <a href="https://studypanda.live/nexttoppers/188" target="_blank" class="batch-card"><img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg"><span>Batch 188 • Olympiad IOQM</span></a>
-        <a href="https://studypanda.live/nexttoppers/197" target="_blank" class="batch-card"><img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg"><span>Batch 197 • Olympiad Combo</span></a>
-        <a href="https://studypanda.live/nexttoppers/122" target="_blank" class="batch-card"><img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg"><span>Batch 122 • Aarambh 9th</span></a>
-        <a href="https://studypanda.live/nexttoppers" target="_blank" class="batch-card" style="border-color: #6366f1; justify-content: center; background: #1e1b4b;"><span style="color: #a5b4fc; font-size: 14px; font-weight: 700; padding: 30px 0;">All Batches ➔</span></a>
+        <a href="https://studypanda.live/nexttoppers/183" target="_blank" class="batch-card" onclick="vibratePhone(25)"><img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg"><span>Batch 183 • Summer Camp</span></a>
+        <a href="https://studypanda.live/nexttoppers/111" target="_blank" class="batch-card" onclick="vibratePhone(25)"><img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg"><span>Batch 111 • Sci 12th PRO</span></a>
+        <a href="https://studypanda.live/nexttoppers/176" target="_blank" class="batch-card" onclick="vibratePhone(25)"><img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg"><span>Batch 176 • Hum 11th</span></a>
+        <a href="https://studypanda.live/nexttoppers/109" target="_blank" class="batch-card" onclick="vibratePhone(25)"><img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg"><span>Batch 109 • Comm CUET 12th</span></a>
+        <a href="https://studypanda.live/nexttoppers/107" target="_blank" class="batch-card" onclick="vibratePhone(25)"><img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg"><span>Batch 107 • Nirbhay 8th</span></a>
+        <a href="https://studypanda.live/nexttoppers/108" target="_blank" class="batch-card" onclick="vibratePhone(25)"><img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg"><span>Batch 108 • Comm 12th PRO</span></a>
+        <a href="https://studypanda.live/nexttoppers/123" target="_blank" class="batch-card" onclick="vibratePhone(25)"><img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg"><span>Batch 123 • Comm 11th</span></a>
+        <a href="https://studypanda.live/nexttoppers/110" target="_blank" class="batch-card" onclick="vibratePhone(25)"><img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg"><span>Batch 110 • Comm 12th</span></a>
+        <a href="https://studypanda.live/nexttoppers/112" target="_blank" class="batch-card" onclick="vibratePhone(25)"><img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg"><span>Batch 112 • Nirmaan 2.0 (8th)</span></a>
+        <a href="https://studypanda.live/nexttoppers/178" target="_blank" class="batch-card" onclick="vibratePhone(25)"><img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg"><span>Batch 178 • Hum CUET 12th</span></a>
+        <a href="https://studypanda.live/nexttoppers/124" target="_blank" class="batch-card" onclick="vibratePhone(25)"><img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg"><span>Batch 124 • Sci CUET 12th</span></a>
+        <a href="https://studypanda.live/nexttoppers/177" target="_blank" class="batch-card" onclick="vibratePhone(25)"><img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg"><span>Batch 177 • Comm Plus 11th</span></a>
+        <a href="https://studypanda.live/nexttoppers/179" target="_blank" class="batch-card" onclick="vibratePhone(25)"><img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg"><span>Batch 179 • Hum Plus 11th</span></a>
+        <a href="https://studypanda.live/nexttoppers/192" target="_blank" class="batch-card" onclick="vibratePhone(25)"><img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg"><span>Batch 192 • Sci 11th</span></a>
+        <a href="https://studypanda.live/nexttoppers/190" target="_blank" class="batch-card" onclick="vibratePhone(25)"><img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg"><span>Batch 190 • Sci Plus 11th</span></a>
+        <a href="https://studypanda.live/nexttoppers/193" target="_blank" class="batch-card" onclick="vibratePhone(25)"><img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg"><span>Batch 193 • Olympiad NSEJS</span></a>
+        <a href="https://studypanda.live/nexttoppers/188" target="_blank" class="batch-card" onclick="vibratePhone(25)"><img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg"><span>Batch 188 • Olympiad IOQM</span></a>
+        <a href="https://studypanda.live/nexttoppers/197" target="_blank" class="batch-card" onclick="vibratePhone(25)"><img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg"><span>Batch 197 • Olympiad Combo</span></a>
+        <a href="https://studypanda.live/nexttoppers/122" target="_blank" class="batch-card" onclick="vibratePhone(25)"><img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg"><span>Batch 122 • Aarambh 9th</span></a>
+        <a href="https://studypanda.live/nexttoppers" target="_blank" class="batch-card" onclick="vibratePhone(25)" style="border-color: #6366f1; justify-content: center; background: #1e1b4b;"><span style="color: #a5b4fc; font-size: 14px; font-weight: 700; padding: 30px 0;">All Batches ➔</span></a>
       </div>
     </div>
   </div>
 
   <script>
+    function vibratePhone(duration) {
+      if ("vibrate" in navigator) {
+        navigator.vibrate(duration);
+      }
+    }
+
     function openBatchesModal() {
       document.getElementById('batchModal').style.display = 'flex';
     }
