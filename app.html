@@ -1,408 +1,277 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>RAJNISH PRIME 2</title>
-  
-  <meta name="description" content="Rajnish Prime 2 - Access 100% free premium batches and courses from top educational platforms.">
-  <meta name="keywords" content="Rajnish Prime 2, free study batches, Physics Wallah, Next Toppers, Mission JEET, RWA, Selection Way, Unacademy">
-  <meta name="author" content="Rajnish">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAJNISH PRIME 2</title>
+    <style>
+        /* मुख्य थीम स्टाइल */
+        body {
+            background-color: #0b0f19;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
-    body {
-      background-color: #080c14;
-      color: #ffffff;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 16px;
-    }
+        /* हेडर और लोगो */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
+        .main-logo-box {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .logo-icon {
+            background-color: #4f46e5;
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+        }
+        .logo-text h1 {
+            font-size: 20px;
+            margin: 0;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
 
-    .navbar { width: 100%; max-width: 480px; display: flex; justify-content: space-between; align-items: center; padding: 10px 0; margin-bottom: 24px; }
-    .nav-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: #fff; }
-    .nav-logo-box { width: 36px; height: 36px; border-radius: 10px; background: #6366f1; display: flex; align-items: center; justify-content: center; font-weight: 800; font-family: 'Syne'; font-size: 18px; }
-    .nav-title { font-family: 'Syne', sans-serif; font-size: 20px; font-weight: 800; letter-spacing: 0.5px; }
-    .menu-btn { background: #111827; border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; width: 40px; height: 40px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 5px; cursor: pointer; }
-    .menu-btn span { display: block; width: 18px; height: 2px; background: #fff; border-radius: 2px; }
+        /* हैमबर्गर मेनू */
+        .menu-btn {
+            font-size: 28px;
+            cursor: pointer;
+        }
 
-    .hero { width: 100%; max-width: 480px; text-align: center; margin-bottom: 30px; }
-    .pill-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(99, 102, 241, 0.1); border: 1px solid rgba(99, 102, 241, 0.3); color: #a5b4fc; font-size: 12px; font-weight: 600; padding: 6px 16px; border-radius: 30px; margin-bottom: 20px; }
-    .dot { width: 6px; height: 6px; background: #6366f1; border-radius: 50%; }
-    .hero h1 { font-family: 'Syne', sans-serif; font-size: 40px; font-weight: 800; line-height: 1.1; margin-bottom: 16px; letter-spacing: -1px; }
-    .hero h1 span { background: linear-gradient(135deg, #818cf8 0%, #fbbf24 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-    .hero p { color: #94a3b8; font-size: 14px; line-height: 1.6; margin-bottom: 24px; padding: 0 10px; }
+        /* सब-टैग घोषणा */
+        .badge-container {
+            text-align: center;
+            margin: 25px 0;
+        }
+        .promo-badge {
+            background-color: rgba(79, 70, 229, 0.15);
+            color: #818cf8;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            border: 1px solid rgba(79, 70, 229, 0.3);
+        }
 
-    .btn-group { display: flex; flex-direction: column; gap: 12px; margin-bottom: 35px; }
-    .btn { width: 100%; padding: 14px; border-radius: 14px; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 15px; font-weight: 700; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 8px; transition: opacity 0.2s; }
-    .btn-primary { background: #6366f1; color: #ffffff; box-shadow: 0 4px 20px rgba(99, 102, 241, 0.4); }
-    .btn-secondary { background: #111827; color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.1); }
-    .btn-youtube { background: #111827; color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.3); }
-    .btn-telegram { background: #111827; color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3); }
+        /* हीरो कंटेंट */
+        .hero-section {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+        .hero-title {
+            font-size: 42px;
+            font-weight: 800;
+            line-height: 1.1;
+            margin: 10px 0;
+        }
+        .hero-desc {
+            color: #94a3b8;
+            font-size: 15px;
+            line-height: 1.6;
+            max-width: 500px;
+            margin: 0 auto;
+        }
 
-    .stats-bar { width: 100%; max-width: 480px; display: grid; grid-template-columns: repeat(4, 1fr); text-align: center; padding-top: 10px; border-top: 1px solid rgba(255, 255, 255, 0.08); margin-bottom: 40px; }
-    .stat-item .num { font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 800; color: #ffffff; margin-bottom: 2px; }
-    .stat-item .label { font-size: 10px; color: #64748b; text-transform: uppercase; font-weight: 700; letter-spacing: 0.5px; }
+        /* पुराने बटन्स की स्टाइल */
+        .action-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 40px;
+        }
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 14px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+        .btn-primary { background-color: #6366f1; color: white; }
+        .btn-outline-blue { border: 1px solid #1d4ed8; color: #3b82f6; background: transparent; }
+        .btn-outline-green { border: 1px solid #047857; color: #10b981; background: transparent; }
+        .btn-outline-red { border: 1px solid #b91c1c; color: #ef4444; background: transparent; }
 
-    .section-container { width: 100%; max-width: 480px; }
-    .section-tag { font-size: 11px; color: #818cf8; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; margin-bottom: 4px; }
-    .section-title { font-family: 'Syne', sans-serif; font-size: 24px; font-weight: 800; margin-bottom: 6px; }
-    .section-desc { color: #94a3b8; font-size: 13px; margin-bottom: 20px; }
+        /* ऊपर का स्टेट्स बार (Stats Bar) */
+        .stats-container {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            margin-bottom: 30px;
+            border-top: 1px solid #1e293b;
+            border-bottom: 1px solid #1e293b;
+            padding: 20px 0;
+        }
+        .stat-item h2 { font-size: 22px; margin: 0; font-weight: bold; color: #fff; }
+        .stat-item p { font-size: 11px; color: #94a3b8; margin: 5px 0 0 0; letter-spacing: 0.5px; }
 
-    .apps-list { display: flex; flex-direction: column; gap: 16px; }
-    .app-card { background: #111827; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 20px; padding: 20px; text-decoration: none; color: inherit; display: flex; flex-direction: column; gap: 14px; box-shadow: 0 4px 20px rgba(0,0,0,0.3); cursor: pointer; }
-    .app-card-top { display: flex; align-items: flex-start; gap: 16px; }
-    
-    /* Branded Logo Box Styles */
-    .app-icon-box { width: 52px; height: 52px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 20px; flex-shrink: 0; box-shadow: inset 0 2px 4px rgba(255,255,255,0.2); }
-    .icon-pw { background: linear-gradient(135deg, #004aad, #0077ff); color: #fff; }
-    .icon-nt { background: linear-gradient(135deg, #4f46e5, #818cf8); color: #fff; }
-    .icon-mj { background: linear-gradient(135deg, #d97706, #fbbf24); color: #111; }
-    .icon-ua { background: linear-gradient(135deg, #059669, #34d399); color: #fff; }
-    .icon-rwa { background: linear-gradient(135deg, #dc2626, #f87171); color: #fff; }
-    .icon-sw { background: linear-gradient(135deg, #7c3aed, #a855f7); color: #fff; }
+        /* ऐप सेक्शन का हेडर */
+        .section-tag { color: #6366f1; font-size: 12px; font-weight: bold; letter-spacing: 1px; margin-bottom: 5px; }
+        .section-title { font-size: 32px; font-weight: 800; line-height: 1.2; margin: 0 0 15px 0; }
+        .section-subtitle { color: #94a3b8; font-size: 14px; margin-bottom: 25px; }
 
-    .app-info h3 { font-family: 'Syne', sans-serif; font-size: 20px; font-weight: 700; color: #ffffff; margin-bottom: 4px; }
-    .app-info p { font-size: 13px; color: #94a3b8; line-height: 1.4; }
-    .live-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); color: #34d399; font-size: 11px; font-weight: 600; padding: 6px 14px; border-radius: 20px; align-self: flex-start; }
-    .live-dot { width: 6px; height: 6px; background-color: #34d399; border-radius: 50%; box-shadow: 0 0 8px #34d399; }
+        /* ऐप लिंक्स और कार्ड डिज़ाइन (App Cards Layout) */
+        .app-card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            margin-bottom: 16px;
+        }
+        .app-card {
+            background-color: #131926;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 16px;
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+            transition: all 0.3s ease;
+        }
+        .app-card-link:hover .app-card {
+            border-color: #6366f1;
+            background-color: #171e2e;
+            transform: translateY(-2px);
+        }
 
-    /* POPUP MODAL STYLES */
-    .modal-overlay {
-      position: fixed;
-      top: 0; left: 0; width: 100%; height: 100%;
-      background: rgba(0, 0, 0, 0.85);
-      backdrop-filter: blur(8px);
-      display: none;
-      justify-content: center;
-      align-items: flex-end;
-      z-index: 999;
-    }
-    .modal-content {
-      background: #0f172a;
-      border: 1px solid rgba(255,255,255,0.15);
-      border-radius: 24px 24px 0 0;
-      width: 100%;
-      max-width: 480px;
-      max-height: 85vh;
-      overflow-y: auto;
-      padding: 20px;
-      box-shadow: 0 -10px 40px rgba(0,0,0,0.5);
-      animation: slideUp 0.3s ease-out;
-    }
-    @keyframes slideUp {
-      from { transform: translateY(100%); }
-      to { transform: translateY(0); }
-    }
-    .modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
-    .modal-title-box { display: flex; align-items: center; gap: 10px; }
-    .modal-logo { width: 32px; height: 32px; border-radius: 8px; background: #6366f1; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px; }
-    .modal-title-box h3 { font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 800; color: #ffffff; }
-    .close-btn { background: rgba(255,255,255,0.1); border: none; color: #fff; width: 32px; height: 32px; border-radius: 50%; font-size: 16px; cursor: pointer; }
-    
-    /* BATCH GRID & EMBEDDED BANNER STYLING */
-    .batch-grid { 
-      display: grid; 
-      grid-template-columns: repeat(2, 1fr); 
-      gap: 12px; 
-      margin-top: 15px; 
-    }
-    .batch-card { 
-      background: #1e293b; 
-      border: 1px solid rgba(255,255,255,0.1); 
-      border-radius: 14px; 
-      color: #fff; 
-      text-decoration: none; 
-      overflow: hidden; 
-      display: flex; 
-      flex-direction: column; 
-      transition: transform 0.2s ease, border-color 0.2s; 
-    }
-    .batch-card:active { transform: scale(0.97); background: #334155; }
-    
-    .batch-banner {
-      width: 100%;
-      height: 95px;
-      padding: 10px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      position: relative;
-      background-size: cover;
-      background-position: center;
-    }
-    .banner-tag {
-      background: rgba(0,0,0,0.6);
-      backdrop-filter: blur(4px);
-      padding: 3px 8px;
-      border-radius: 6px;
-      font-size: 9px;
-      font-weight: 700;
-      color: #fbbf24;
-      align-self: flex-start;
-      border: 1px solid rgba(255,255,255,0.1);
-    }
-    .banner-title {
-      font-family: 'Syne', sans-serif;
-      font-size: 16px;
-      font-weight: 800;
-      text-shadow: 0 2px 4px rgba(0,0,0,0.8);
-      line-height: 1.1;
-    }
-    .banner-price {
-      font-size: 10px;
-      font-weight: 700;
-      color: #34d399;
-    }
+        /* इमेज लोगो की नई परफेक्ट सेटिंग */
+        .app-logo {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 1px solid #334155;
+            background-color: #fff; /* ट्रांसपेरेंट लोगो को उभारने के लिए */
+        }
 
-    .theme-summer { background: linear-gradient(135deg, #0284c7, #0f172a); }
-    .theme-cuet { background: linear-gradient(135deg, #059669, #064e3b); }
-    .theme-olympiad { background: linear-gradient(135deg, #1e1b4b, #311b92); }
-    .theme-nirmaan { background: linear-gradient(135deg, #b45309, #451a03); }
-    .theme-aarambh { background: linear-gradient(135deg, #4338ca, #1e1b4b); }
-    .theme-ntsat { background: linear-gradient(135deg, #6b21a8, #3b0764); }
+        .app-info { flex: 1; }
+        .app-info h3 { margin: 0 0 6px 0; font-size: 18px; font-weight: 600; color: #fff; }
+        .app-info p { color: #94a3b8; font-size: 13px; line-height: 1.5; margin: 0 0 12px 0; }
 
-    .batch-card-info {
-      padding: 10px 8px;
-      font-size: 12px;
-      font-weight: 600;
-      text-align: center;
-      line-height: 1.3;
-      background: #1e293b;
-    }
-  </style>
+        /* लाइव बैच इंडिकेटर */
+        .live-tag {
+            display: inline-flex;
+            align-items: center;
+            background-color: rgba(16, 185, 129, 0.1);
+            color: #10b981;
+            font-size: 11px;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 20px;
+            border: 1px solid rgba(16, 185, 129, 0.2);
+        }
+        .live-tag .dot {
+            width: 6px;
+            height: 6px;
+            background-color: #10b981;
+            border-radius: 50%;
+            margin-right: 6px;
+        }
+    </style>
 </head>
 <body>
 
-  <nav class="navbar">
-    <a href="#" class="nav-brand">
-      <div class="nav-logo-box">R</div>
-      <span class="nav-title">RAJNISH PRIME 2</span>
-    </a>
-    <div class="menu-btn">
-      <span></span>
-      <span></span>
-      <span></span>
+    <!-- हेडर बार -->
+    <header class="header">
+        <div class="main-logo-box">
+            <div class="logo-icon">R</div>
+            <div class="logo-text">
+                <h1>Rajnish<br>Prime 2</h1>
+            </div>
+        </div>
+        <div class="menu-btn">&#9776;</div>
+    </header>
+
+    <!-- टॉप प्रोमो बैज -->
+    <div class="badge-container">
+        <span class="promo-badge">• 100% Free • Premium Courses Unlocked</span>
     </div>
-  </nav>
 
-  <header class="hero">
-    <div class="pill-badge">
-      <span class="dot"></span> 100% Free • Premium Courses Unlocked
+    <!-- हीरो मुख्य टेक्स्ट -->
+    <section class="hero-section">
+        <h1 class="hero-title">Study<br>Smarter.<br>Pay<br>Nothing.</h1>
+        <p class="hero-desc">Access premium paid courses from India's top ed-tech platforms — completely free. All your favourite educators, one place.</p>
+    </section>
+
+    <!-- मुख्य बटन लिंक्स -->
+    <div class="action-buttons">
+        <a href="#apps-list-section" class="btn btn-primary">🚀 Explore Apps</a>
+        <a href="YOUR_TELEGRAM_LINK_HERE" target="_blank" class="btn btn-outline-blue">🚀 Join Telegram Channel</a>
+        <a href="YOUR_WHATSAPP_LINK_HERE" target="_blank" class="btn btn-outline-green">📢 Join WhatsApp Channel</a>
+        <a href="YOUR_YOUTUBE_LINK_HERE" target="_blank" class="btn btn-outline-red">📺 Subscribe YouTube</a>
     </div>
-    <h1>Study Smarter. Pay <span>Nothing.</span></h1>
-    <p>Access premium paid courses from India's top ed-tech platforms — completely free. All your favourite educators, one place.</p>
-    
-    <div class="btn-group">
-      <a href="#apps" class="btn btn-primary">🚀 Explore Apps</a>
-      <a href="https://t.me/freestudybach2027" target="_blank" class="btn btn-telegram">✈️ Join Telegram Channel</a>
-      <a href="https://whatsapp.com/channel/0029VbDI4yFK5cDHjEHcNk16" target="_blank" class="btn btn-secondary">📢 Join WhatsApp Channel</a>
-      <a href="https://youtube.com/@rajnishstudyshorts?si=mPxFar33SZb9pHjA" target="_blank" class="btn btn-youtube">📺 Subscribe YouTube</a>
+
+    <!-- स्टेट्स बार -->
+    <div class="stats-container">
+        <div class="stat-item"><h2>1000+</h2><p>BATCHES</p></div>
+        <div class="stat-item"><h2>2</h2><p>PLATFORMS</p></div>
+        <div class="stat-item"><h2>₹0</h2><p>COST</p></div>
+        <div class="stat-item"><h2>24/7</h2><p>ACCESS</p></div>
     </div>
-  </header>
 
-  <div class="stats-bar">
-    <div class="stat-item"><div class="num">1000+</div><div class="label">Batches</div></div>
-    <div class="stat-item"><div class="num">6</div><div class="label">Platforms</div></div>
-    <div class="stat-item"><div class="num">₹0</div><div class="label">Cost</div></div>
-    <div class="stat-item"><div class="num">24/7</div><div class="label">Access</div></div>
-  </div>
+    <!-- ऐप्स लिस्ट सेक्शन (लोगो के साथ अपडेटेड) -->
+    <section id="apps-list-section">
+        <p class="section-tag">OFFICIAL PLATFORMS</p>
+        <h1 class="section-title">Explore Our<br>Apps</h1>
+        <p class="section-subtitle">Pick your platform and get instant free access to all premium batches.</p>
 
-  <div class="section-container" id="apps">
-    <p class="section-tag">Official Platforms</p>
-    <h2 class="section-title">Explore Our Apps</h2>
-    <p class="section-desc">Pick your platform and get instant free access to all premium batches.</p>
+        <div class="apps-list">
+            <!-- 1. Physics Wallah -->
+            <a href="#" class="app-card-link">
+                <div class="app-card">
+                    <img src="https://ibb.co" alt="Physics Wallah" class="app-logo">
+                    <div class="app-info">
+                        <h3>Physics Wallah</h3>
+                        <p>India's most loved ed-tech. IIT JEE, NEET, and board prep by PW's star educators.</p>
+                        <span class="live-tag"><span class="dot"></span> LIVE BATCHES AVAILABLE</span>
+                    </div>
+                </div>
+            </a>
 
-    <div class="apps-list">
-      <!-- Physics Wallah -->
-      <a href="https://pwthor.live/study/batches" target="_blank" class="app-card">
-        <div class="app-card-top">
-          <div class="app-icon-box icon-pw">PW</div>
-          <div class="app-info">
-            <h3>Physics Wallah</h3>
-            <p>Master Physics concepts with high-quality free lectures and notes.</p>
-          </div>
-        </div>
-        <div class="live-badge"><span class="live-dot"></span> LIVE BATCHES AVAILABLE</div>
-      </a>
+            <!-- 2. Next Toppers -->
+            <a href="#" class="app-card-link">
+                <div class="app-card">
+                    <img src="https://ibb.co" alt="Next Toppers" class="app-logo">
+                    <div class="app-info">
+                        <h3>Next Toppers</h3>
+                        <p>Crack competitive exams with high-quality free video lectures and notes.</p>
+                        <span class="live-tag"><span class="dot"></span> LIVE BATCHES AVAILABLE</span>
+                    </div>
+                </div>
+            </a>
 
-      <!-- NEXT TOPPERS -->
-      <div class="app-card" onclick="openBatchesModal()">
-        <div class="app-card-top">
-          <div class="app-icon-box icon-nt">NT</div>
-          <div class="app-info">
-            <h3>Next Toppers</h3>
-            <p>Crack competitive exams with high-quality free video lectures and notes.</p>
-          </div>
-        </div>
-        <div class="live-badge"><span class="live-dot"></span> LIVE BATCHES AVAILABLE</div>
-      </div>
+            <!-- 3. Mission JEET -->
+            <a href="#" class="app-card-link">
+                <div class="app-card">
+                    <img src="https://ibb.co" alt="Mission JEET" class="app-logo">
+                    <div class="app-info">
+                        <h3>Mission JEET</h3>
+                        <p>Ace JEE exams with expert strategy, practice and detailed solutions.</p>
+                        <span class="live-tag"><span class="dot"></span> LIVE BATCHES AVAILABLE</span>
+                    </div>
+                </div>
+            </a>
 
-      <!-- Mission JEET -->
-      <a href="https://studypanda.live/missionjeet" target="_blank" class="app-card">
-        <div class="app-card-top">
-          <div class="app-icon-box icon-mj">MJ</div>
-          <div class="app-info">
-            <h3>Mission JEET</h3>
-            <p>Ace JEE exams with expert strategy, practice and detailed solutions.</p>
-          </div>
-        </div>
-        <div class="live-badge"><span class="live-dot"></span> LIVE BATCHES AVAILABLE</div>
-      </a>
+            <!-- 4. Unacademy -->
+            <a href="#" class="app-card-link">
+                <div class="app-card">
+                    <img src="https://ibb.co" alt="Unacademy" class="app-logo">
+                    <div class="app-info">
+                        <h3>Unacademy</h3>
 
-      <!-- Unacademy -->
-      <a href="https://studypanda.live/una" target="_blank" class="app-card">
-        <div class="app-card-top">
-          <div class="app-icon-box icon-ua">UA</div>
-          <div class="app-info">
-            <h3>Unacademy</h3>
-            <p>Learn from India's top educators across different subjects and exams.</p>
-          </div>
-        </div>
-        <div class="live-badge"><span class="live-dot"></span> LIVE BATCHES AVAILABLE</div>
-      </a>
-
-      <!-- RWA -->
-      <a href="https://studypanda.live/rwa" target="_blank" class="app-card">
-        <div class="app-card-top">
-          <div class="app-icon-box icon-rwa">RW</div>
-          <div class="app-info">
-            <h3>RWA</h3>
-            <p>Your companion for govt. job preparation and exam guidance.</p>
-          </div>
-        </div>
-        <div class="live-badge"><span class="live-dot"></span> LIVE BATCHES AVAILABLE</div>
-      </a>
-
-      <!-- Selection Way -->
-      <a href="https://selectionwayy.vercel.app" target="_blank" class="app-card">
-        <div class="app-card-top">
-          <div class="app-icon-box icon-sw">SW</div>
-          <div class="app-info">
-            <h3>Selection Way</h3>
-            <p>Smart way to prepare for competitive exams with clear concepts.</p>
-          </div>
-        </div>
-        <div class="live-badge"><span class="live-dot"></span> LIVE BATCHES AVAILABLE</div>
-      </a>
-    </div>
-  </div>
-
-  <!-- BATCHES POPUP MODAL -->
-  <div class="modal-overlay" id="batchModal">
-    <div class="modal-content">
-      <div class="modal-header">
-        <div class="modal-title-box">
-          <div class="modal-logo">NT</div>
-          <h3>Next Toppers Batches</h3>
-        </div>
-        <button class="close-btn" onclick="closeBatchesModal()">✕</button>
-      </div>
-      <p style="color: #94a3b8; font-size: 13px;">Select your batch to start studying directly without popups:</p>
-      
-      <div class="batch-grid">
-        <a href="https://studypanda.live/nexttoppers/183" target="_blank" class="batch-card">
-          <div class="batch-banner theme-summer">
-            <span class="banner-tag">Class 6th-8th</span>
-            <div class="banner-title">SUMMER CAMP</div>
-            <span class="banner-price">₹399/- FREE</span>
-          </div>
-          <div class="batch-card-info">Batch 183 • Summer Camp</div>
-        </a>
-
-        <a href="https://studypanda.live/nexttoppers/109" target="_blank" class="batch-card">
-          <div class="batch-banner theme-cuet">
-            <span class="banner-tag">Class 12th</span>
-            <div class="banner-title">CUET 2026</div>
-            <span class="banner-price">₹999/- FREE</span>
-          </div>
-          <div class="batch-card-info">Batch 109 • Comm CUET</div>
-        </a>
-
-        <a href="https://studypanda.live/nexttoppers/197" target="_blank" class="batch-card">
-          <div class="batch-banner theme-olympiad">
-            <span class="banner-tag">Class 8th-12th</span>
-            <div class="banner-title">IOQM + NSEJS</div>
-            <span class="banner-price">₹3999/- FREE</span>
-          </div>
-          <div class="batch-card-info">Batch 197 • Olympiad Combo</div>
-        </a>
-
-        <a href="https://studypanda.live/nexttoppers/188" target="_blank" class="batch-card">
-          <div class="batch-banner theme-olympiad">
-            <span class="banner-tag">Class 8th-12th</span>
-            <div class="banner-title">IOQM OLYMPIAD</div>
-            <span class="banner-price">₹2499/- FREE</span>
-          </div>
-          <div class="batch-card-info">Batch 188 • IOQM Crash</div>
-        </a>
-
-        <a href="https://studypanda.live/nexttoppers/193" target="_blank" class="batch-card">
-          <div class="batch-banner theme-olympiad">
-            <span class="banner-tag">Class 8th-10th</span>
-            <div class="banner-title">NSEJS + SEHSS</div>
-            <span class="banner-price">₹2499/- FREE</span>
-          </div>
-          <div class="batch-card-info">Batch 193 • NSEJS + SEHSS</div>
-        </a>
-
-        <a href="https://studypanda.live/nexttoppers/112" target="_blank" class="batch-card">
-          <div class="batch-banner theme-nirmaan">
-            <span class="banner-tag">Class 8th</span>
-            <div class="banner-title">NIRMAAN 2.0</div>
-            <span class="banner-price">₹2999/- FREE</span>
-          </div>
-          <div class="batch-card-info">Batch 112 • Nirmaan 2.0</div>
-        </a>
-
-        <a href="https://studypanda.live/nexttoppers/107" target="_blank" class="batch-card">
-          <div class="batch-banner theme-nirmaan">
-            <span class="banner-tag">Class 8th</span>
-            <div class="banner-title">NIRMAAN</div>
-            <span class="banner-price">₹2999/- FREE</span>
-          </div>
-          <div class="batch-card-info">Batch 107 • Nirbhay 8th</div>
-        </a>
-
-        <a href="https://studypanda.live/nexttoppers/176" target="_blank" class="batch-card">
-          <div class="batch-banner theme-ntsat">
-            <span class="banner-tag">Class 8th</span>
-            <div class="banner-title">NTSAT TEST</div>
-            <span class="banner-price">100% SCHOLARSHIP</span>
-          </div>
-          <div class="batch-card-info">Batch 176 • NTSAT Special</div>
-        </a>
-
-        <a href="https://studypanda.live/nexttoppers/122" target="_blank" class="batch-card">
-          <div class="batch-banner theme-aarambh">
-            <span class="banner-tag">Class 9th</span>
-            <div class="banner-title">AARAMBH</div>
-            <span class="banner-price">₹2499/- FREE</span>
-          </div>
-          <div class="batch-card-info">Batch 122 • Aarambh 9th</div>
-        </a>
-
-        <a href="https://studypanda.live/nexttoppers" target="_blank" class="batch-card" style="border-color: #6366f1; justify-content: center; background: #1e1b4b;">
-          <div style="color: #a5b4fc; font-size: 14px; font-weight: 700; text-align: center; padding: 35px 0;">All Batches ➔</div>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    function openBatchesModal() {
-      document.getElementById('batchModal').style.display = 'flex';
-    }
-    function closeBatchesModal() {
-      document.getElementById('batchModal').style.display = 'none';
-    }
-  </script>
-
-</body>
-</html>
