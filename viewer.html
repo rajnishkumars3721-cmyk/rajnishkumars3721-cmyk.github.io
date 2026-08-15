@@ -3,28 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Rajnish Prime - Study Content</title>
+    <title>Rajnish Prime - Redirecting...</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html, body {
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
+        body {
             background-color: #080c14;
+            color: #ffffff;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+            padding: 20px;
         }
-        /* Yeh iframe ko poori screen par fit kar dega */
-        .content-frame {
-            width: 100%;
-            height: 100%;
-            border: none;
-            display: block;
+        .loader {
+            width: 40px;
+            height: 40px;
+            border: 3px solid rgba(6, 182, 212, 0.2);
+            border-top: 3px solid #06b6d4;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin-bottom: 20px;
         }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        h2 { font-size: 20px; margin-bottom: 8px; }
+        p { color: #94a3b8; font-size: 14px; }
+        a { color: #38bdf8; margin-top: 15px; display: inline-block; text-decoration: none; font-weight: 600; }
     </style>
+    
+    <!-- Automatic redirection script -->
+    <script>
+        window.location.replace("https://pwthor.live/study/batches");
+    </script>
 </head>
 <body>
 
-    <!-- Yahan src mein aapko jis website ya batch ka content dikhana hai uska link daal dein -->
-    <iframe src="https://pwthor.live/study/batches" class="content-frame" title="Rajnish Prime Content"></iframe>
+    <div class="loader"></div>
+    <h2>Opening Rajnish Prime Content...</h2>
+    <p>Please wait while we redirect you to the batches.</p>
+    
+    <!-- Backup link agar redirect na ho -->
+    <a href="https://pwthor.live/study/batches">Click here if not redirected automatically</a>
 
 </body>
 </html>
+
