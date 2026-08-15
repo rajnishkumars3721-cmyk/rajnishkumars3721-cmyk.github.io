@@ -5,12 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Rajnish Prime</title>
   
-  <!-- Browser & PWA Branding Meta Tags -->
   <meta name="apple-mobile-web-app-title" content="Rajnish Prime">
   <meta name="application-name" content="Rajnish Prime">
   <meta name="description" content="Rajnish Prime - Access 100% free premium batches and courses from top educational platforms.">
-  <meta name="keywords" content="Rajnish Prime, free study batches, Physics Wallah, Next Toppers, Mission JEET, RWA, Selection Way, Unacademy, StudyIQ, CDS Journey, free education website">
-  <meta name="author" content="Rajnish">
   <meta name="theme-color" content="#080c14">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -64,31 +61,10 @@
       border: 1px solid rgba(255, 255, 255, 0.25);
       box-shadow: 0 6px 25px rgba(6, 182, 212, 0.45); 
     }
-    .btn-primary:active { transform: scale(0.97); }
     
-    .btn-telegram { 
-      background: #0f172a; 
-      color: #38bdf8; 
-      border: 1.5px solid #38bdf8; 
-      box-shadow: 0 4px 15px rgba(56, 189, 248, 0.15);
-    }
-    .btn-telegram:active { transform: scale(0.97); }
-
-    .btn-whatsapp { 
-      background: #0f172a; 
-      color: #22c55e; 
-      border: 1.5px solid #22c55e; 
-      box-shadow: 0 4px 15px rgba(34, 197, 94, 0.15);
-    }
-    .btn-whatsapp:active { transform: scale(0.97); }
-
-    .btn-youtube { 
-      background: #0f172a; 
-      color: #ef4444; 
-      border: 1.5px solid #ef4444; 
-      box-shadow: 0 4px 15px rgba(239, 68, 68, 0.15);
-    }
-    .btn-youtube:active { transform: scale(0.97); }
+    .btn-telegram { background: #0f172a; color: #38bdf8; border: 1.5px solid #38bdf8; box-shadow: 0 4px 15px rgba(56, 189, 248, 0.15); }
+    .btn-whatsapp { background: #0f172a; color: #22c55e; border: 1.5px solid #22c55e; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.15); }
+    .btn-youtube { background: #0f172a; color: #ef4444; border: 1.5px solid #ef4444; box-shadow: 0 4px 15px rgba(239, 68, 68, 0.15); }
 
     .stats-bar { width: 100%; max-width: 480px; display: grid; grid-template-columns: repeat(4, 1fr); text-align: center; padding: 14px 0; border-top: 1px solid rgba(255, 255, 255, 0.08); border-bottom: 1px solid rgba(255, 255, 255, 0.08); margin-bottom: 30px; background: rgba(17, 24, 39, 0.4); border-radius: 16px; }
     .stat-item .num { font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 800; color: #38bdf8; margin-bottom: 2px; }
@@ -102,6 +78,7 @@
     .apps-list { display: flex; flex-direction: column; gap: 16px; }
     .app-card { background: #111827; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 20px; padding: 20px; text-decoration: none; color: inherit; display: flex; flex-direction: column; gap: 14px; box-shadow: 0 4px 20px rgba(0,0,0,0.3); cursor: pointer; transition: transform 0.2s ease, border-color 0.2s ease; }
     .app-card:active { transform: scale(0.98); border-color: rgba(6, 182, 212, 0.4); }
+    
     .app-card-top { display: flex; align-items: flex-start; gap: 16px; }
     .app-icon { width: 60px; height: 60px; border-radius: 14px; object-fit: cover; border: 1px solid rgba(255,255,255,0.1); flex-shrink: 0; background: #1f2937; }
     .app-info h3 { font-family: 'Syne', sans-serif; font-size: 20px; font-weight: 700; color: #ffffff; margin-bottom: 4px; }
@@ -144,7 +121,6 @@
     
     .batch-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 15px; }
     .batch-card { background: #1e293b; border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; color: #fff; text-decoration: none; overflow: hidden; display: flex; flex-direction: column; align-items: center; transition: transform 0.2s ease; }
-    .batch-card:active { transform: scale(0.97); }
     .batch-card img { width: 100%; height: 100px; object-fit: cover; border-bottom: 1px solid rgba(255,255,255,0.1); }
     .batch-card span { padding: 8px 6px; font-size: 12px; font-weight: 600; text-align: center; }
   </style>
@@ -178,7 +154,7 @@
 
   <div class="stats-bar">
     <div class="stat-item"><div class="num">1000+</div><div class="label">Batches</div></div>
-    <div class="stat-item"><div class="num">10</div><div class="label">Platforms</div></div>
+    <div class="stat-item"><div class="num">15+</div><div class="label">Platforms</div></div>
     <div class="stat-item"><div class="num">₹0</div><div class="label">Cost</div></div>
     <div class="stat-item"><div class="num">24/7</div><div class="label">Access</div></div>
   </div>
@@ -226,7 +202,7 @@
       </a>
 
       <!-- 4. Mission JEET -->
-      <a href="https://studypanda.live/missionjeet" class="app-card" onclick="vibratePhone(35)">
+      <a href="https://studypanda.live/missionjeet" target="_blank" class="app-card" onclick="vibratePhone(35)">
         <div class="app-card-top">
           <img src="https://i.ibb.co/G4kQkcTh/Screenshot-20260811-183043-2.jpg" alt="Mission JEET" class="app-icon">
           <div class="app-info">
@@ -238,7 +214,7 @@
       </a>
 
       <!-- 5. Unacademy -->
-      <a href="https://studypanda.live/una" class="app-card" onclick="vibratePhone(35)">
+      <a href="https://studypanda.live/una" target="_blank" class="app-card" onclick="vibratePhone(35)">
         <div class="app-card-top">
           <img src="https://i.ibb.co/NdK48RqM/Screenshot-20260811-183136-2.jpg" alt="Unacademy" class="app-icon">
           <div class="app-info">
@@ -250,7 +226,7 @@
       </a>
 
       <!-- 6. Rwa -->
-      <a href="https://studypanda.live/rwa" class="app-card" onclick="vibratePhone(35)">
+      <a href="https://studypanda.live/rwa" target="_blank" class="app-card" onclick="vibratePhone(35)">
         <div class="app-card-top">
           <img src="https://i.ibb.co/wh5CY8Ds/Screenshot-20260811-183211-2.jpg" alt="Rwa" class="app-icon">
           <div class="app-info">
@@ -262,7 +238,7 @@
       </a>
 
       <!-- 7. Selection Way -->
-      <a href="https://selectionwayy.vercel.app" class="app-card" onclick="vibratePhone(35)">
+      <a href="https://selectionwayy.vercel.app" target="_blank" class="app-card" onclick="vibratePhone(35)">
         <div class="app-card-top">
           <img src="https://i.ibb.co/nMk354fp/logo.png" alt="Selection Way" class="app-icon">
           <div class="app-info">
@@ -309,17 +285,78 @@
         <div class="live-badge"><span class="live-dot"></span> LIVE BATCHES AVAILABLE</div>
       </a>
 
-      <!-- 11. RAJNISH PRIME DIGITAL LIBRARY (E-Books) -->
-      <a href="https://nexthope.pages.dev/pinnacle/" target="_blank" class="app-card" onclick="vibratePhone(35)">
+      <!-- 11. Vibrant Academy (UPDATED NAME) -->
+      <a href="https://nexthope.pages.dev/vb/" target="_blank" class="app-card" onclick="vibratePhone(35)">
         <div class="app-card-top">
-          <img src="https://nexthope.pages.dev/favicon.ico" alt="RAJNISH PRIME DIGITAL LIBRARY" class="app-icon">
+          <img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg" alt="Vibrant Academy" class="app-icon">
           <div class="app-info">
-            <h3>RAJNISH PRIME DIGITAL LIBRARY (E-Books)</h3>
-            <p>Access free e-books, study materials, and premium competitive preparation content.</p>
+            <h3>Vibrant Academy</h3>
+            <p>Access high-quality IIT-JEE & NEET prep material and courses.</p>
           </div>
         </div>
-        <div class="live-badge"><span class="live-dot"></span> E-BOOKS & COURSES AVAILABLE</div>
+        <div class="live-badge"><span class="live-dot"></span> LIVE BATCHES AVAILABLE</div>
       </a>
+
+      <!-- 12. UNCOFFLINE -->
+      <a href="https://nexthope.pages.dev/uncoffline/" target="_blank" class="app-card" onclick="vibratePhone(35)">
+        <div class="app-card-top">
+          <img src="https://i.ibb.co/NdK48RqM/Screenshot-20260811-183136-2.jpg" alt="UNCOFFLINE" class="app-icon">
+          <div class="app-info">
+            <h3>UNCOFFLINE</h3>
+            <p>Offline style structured study material and recorded courses.</p>
+          </div>
+        </div>
+        <div class="live-badge"><span class="live-dot"></span> LIVE BATCHES AVAILABLE</div>
+      </a>
+
+      <!-- 13. GS Vision -->
+      <a href="https://nexthope.pages.dev/gsvision/" target="_blank" class="app-card" onclick="vibratePhone(35)">
+        <div class="app-card-top">
+          <img src="https://i.ibb.co/YF3vNsnh/Screenshot-20260815-171317-2.jpg" alt="GS Vision" class="app-icon">
+          <div class="app-info">
+            <h3>GS Vision | NextHope</h3>
+            <p>Complete General Studies lectures, notes, and exam prep modules.</p>
+          </div>
+        </div>
+        <div class="live-badge"><span class="live-dot"></span> LIVE BATCHES AVAILABLE</div>
+      </a>
+
+      <!-- 14. Toppers' Wisdom -->
+      <a href="https://nexthope.pages.dev/tw/" target="_blank" class="app-card" onclick="vibratePhone(35)">
+        <div class="app-card-top">
+          <img src="https://i.ibb.co/F4GJ92dp/Screenshot-20260815-171405-2.jpg" alt="Toppers Wisdom" class="app-icon">
+          <div class="app-info">
+            <h3>Toppers' Wisdom | Premium Batches</h3>
+            <p>High-yield premium batch lectures and topper strategies.</p>
+          </div>
+        </div>
+        <div class="live-badge"><span class="live-dot"></span> LIVE BATCHES AVAILABLE</div>
+      </a>
+
+      <!-- 15. FutureKul Courses -->
+      <a href="https://nexthope.pages.dev/futurekul/" target="_blank" class="app-card" onclick="vibratePhone(35)">
+        <div class="app-card-top">
+          <img src="https://i.ibb.co/N2DYywGW/Screenshot-20260815-171520-2.jpg" alt="FutureKul Courses" class="app-icon">
+          <div class="app-info">
+            <h3>FutureKul Courses</h3>
+            <p>Specialized online courses for science, competitive and foundation exams.</p>
+          </div>
+        </div>
+        <div class="live-badge"><span class="live-dot"></span> LIVE BATCHES AVAILABLE</div>
+      </a>
+
+      <!-- 16. Pinnacle Ebooks -->
+      <a href="https://nexthope.pages.dev/pinnacle/" target="_blank" class="app-card" onclick="vibratePhone(35)">
+        <div class="app-card-top">
+          <img src="https://i.ibb.co/jPgCZGMR/Screenshot-20260815-171712-2.jpg" alt="Pinnacle Ebooks" class="app-icon">
+          <div class="app-info">
+            <h3>Pinnacle Ebooks</h3>
+            <p>Access free e-books, Pinnacle study materials, and premium reference content.</p>
+          </div>
+        </div>
+        <div class="live-badge"><span class="live-dot"></span> E-BOOKS AVAILABLE</div>
+      </a>
+
     </div>
   </div>
 
@@ -336,13 +373,13 @@
       <p style="color: #94a3b8; font-size: 13px;">Select your batch to start studying directly:</p>
       
       <div class="batch-grid">
-        <a href="https://studypanda.live/nexttoppers/197" class="batch-card" onclick="vibratePhone(25)"><img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg"><span>NIRMAAN : CLASS 7</span></a>
-        <a href="https://studypanda.live/nexttoppers/193" class="batch-card" onclick="vibratePhone(25)"><img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg"><span>NIRMAAN 2.0 BATCH</span></a>
-        <a href="https://studypanda.live/nexttoppers/192" class="batch-card" onclick="vibratePhone(25)"><img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg"><span>IOQM + NSEJS + SEHSS</span></a>
-        <a href="https://studypanda.live/nexttoppers/191" class="batch-card" onclick="vibratePhone(25)"><img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg"><span>NSEJS + SEHSS CRASH</span></a>
-        <a href="https://studypanda.live/nexttoppers/190" class="batch-card" onclick="vibratePhone(25)"><img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg"><span>IOQM - CRASH COURSE</span></a>
-        <a href="https://studypanda.live/nexttoppers/188" class="batch-card" onclick="vibratePhone(25)"><img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg"><span>NTSAT CLASS 8th</span></a>
-        <a href="https://studypanda.live/nexttoppers" class="batch-card" onclick="vibratePhone(25)" style="border-color: #06b6d4; justify-content: center; background: rgba(6, 182, 212, 0.1); grid-column: span 2;"><span style="color: #38bdf8; font-size: 14px; font-weight: 700; padding: 20px 0;">All Batches ➔</span></a>
+        <a href="https://studypanda.live/nexttoppers/197" target="_blank" class="batch-card" onclick="vibratePhone(25)"><img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg"><span>NIRMAAN : CLASS 7</span></a>
+        <a href="https://studypanda.live/nexttoppers/193" target="_blank" class="batch-card" onclick="vibratePhone(25)"><img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg"><span>NIRMAAN 2.0 BATCH</span></a>
+        <a href="https://studypanda.live/nexttoppers/192" target="_blank" class="batch-card" onclick="vibratePhone(25)"><img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg"><span>IOQM + NSEJS + SEHSS</span></a>
+        <a href="https://studypanda.live/nexttoppers/191" target="_blank" class="batch-card" onclick="vibratePhone(25)"><img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg"><span>NSEJS + SEHSS CRASH</span></a>
+        <a href="https://studypanda.live/nexttoppers/190" target="_blank" class="batch-card" onclick="vibratePhone(25)"><img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg"><span>IOQM - CRASH COURSE</span></a>
+        <a href="https://studypanda.live/nexttoppers/188" target="_blank" class="batch-card" onclick="vibratePhone(25)"><img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg"><span>NTSAT CLASS 8th</span></a>
+        <a href="https://studypanda.live/nexttoppers" target="_blank" class="batch-card" onclick="vibratePhone(25)" style="border-color: #06b6d4; justify-content: center; background: rgba(6, 182, 212, 0.1); grid-column: span 2;"><span style="color: #38bdf8; font-size: 14px; font-weight: 700; padding: 20px 0;">All Batches ➔</span></a>
       </div>
     </div>
   </div>
