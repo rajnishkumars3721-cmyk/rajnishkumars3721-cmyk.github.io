@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Rajnish Prime</title>
+  <title>RAJNISH PRIME DIGITAL LIBRARY</title>
   
-  <!-- Browser & PWA Branding Meta Tags -->
-  <meta name="apple-mobile-web-app-title" content="Rajnish Prime">
-  <meta name="application-name" content="Rajnish Prime">
-  <meta name="description" content="Rajnish Prime - Access 100% free premium batches and courses from top educational platforms.">
-  <meta name="keywords" content="Rajnish Prime, free study batches, Physics Wallah, Next Toppers, Mission JEET, RWA, Selection Way, Unacademy, StudyIQ, CDS Journey, free education website">
+  <meta name="apple-mobile-web-app-title" content="RAJNISH PRIME DIGITAL LIBRARY">
+  <meta name="application-name" content="RAJNISH PRIME DIGITAL LIBRARY">
+  <meta name="description" content="RAJNISH PRIME DIGITAL LIBRARY - Access 100% free e-books, study materials, and premium courses from top educational platforms.">
+  <meta name="keywords" content="RAJNISH PRIME DIGITAL LIBRARY, free e-books, study materials, Physics Wallah, Next Toppers, Vibrant Academy, Unc Offline, GS Vision, Toppers Wisdom, Futurekul, Pinnacle, free education website">
   <meta name="author" content="Rajnish">
   <meta name="theme-color" content="#080c14">
 
@@ -18,31 +17,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
-    body {
-      background-color: #080c14;
-      color: #ffffff;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 16px;
-    }
+    body { background-color: #080c14; color: #ffffff; font-family: 'Plus Jakarta Sans', sans-serif; min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding: 16px; }
 
     .navbar { width: 100%; max-width: 480px; display: flex; justify-content: space-between; align-items: center; padding: 10px 0; margin-bottom: 20px; }
     .nav-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: #fff; }
     .nav-logo-img { width: 40px; height: 40px; border-radius: 12px; object-fit: cover; border: 2px solid #06b6d4; box-shadow: 0 0 15px rgba(6, 182, 212, 0.5); }
-    
-    .nav-title { 
-      font-family: 'Syne', sans-serif; 
-      font-size: 19px; 
-      font-weight: 800; 
-      letter-spacing: 0.8px; 
-      background: linear-gradient(135deg, #ffffff 30%, #38bdf8 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-shadow: 0 0 25px rgba(56, 189, 248, 0.4);
-    }
+    .nav-title { font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 800; letter-spacing: 0.5px; background: linear-gradient(135deg, #ffffff 30%, #38bdf8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-shadow: 0 0 25px rgba(56, 189, 248, 0.4); }
 
     .menu-btn { background: #111827; border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; width: 40px; height: 40px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 5px; cursor: pointer; }
     .menu-btn span { display: block; width: 18px; height: 2px; background: #38bdf8; border-radius: 2px; box-shadow: 0 0 8px #38bdf8; }
@@ -51,44 +31,17 @@
     .pill-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(6, 182, 212, 0.1); border: 1px solid rgba(6, 182, 212, 0.3); color: #38bdf8; font-size: 12px; font-weight: 600; padding: 6px 16px; border-radius: 30px; margin-bottom: 14px; box-shadow: 0 0 15px rgba(6, 182, 212, 0.15); }
     .dot { width: 6px; height: 6px; background: #06b6d4; border-radius: 50%; box-shadow: 0 0 8px #06b6d4; }
     
-    .hero h1 { font-family: 'Syne', sans-serif; font-size: 36px; font-weight: 800; line-height: 1.1; margin-bottom: 12px; letter-spacing: -1px; }
+    .hero h1 { font-family: 'Syne', sans-serif; font-size: 32px; font-weight: 800; line-height: 1.1; margin-bottom: 12px; letter-spacing: -1px; }
     .hero h1 span { background: linear-gradient(135deg, #38bdf8 0%, #fbbf24 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     .hero p { color: #94a3b8; font-size: 13px; line-height: 1.5; margin-bottom: 18px; padding: 0 10px; }
 
     .btn-group { display: flex; flex-direction: column; gap: 12px; margin-bottom: 30px; }
     .btn { width: 100%; padding: 14px; border-radius: 14px; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 15px; font-weight: 700; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 10px; transition: all 0.3s ease; }
     
-    .btn-primary { 
-      background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 50%, #6366f1 100%); 
-      color: #ffffff; 
-      border: 1px solid rgba(255, 255, 255, 0.25);
-      box-shadow: 0 6px 25px rgba(6, 182, 212, 0.45); 
-    }
-    .btn-primary:active { transform: scale(0.97); }
-    
-    .btn-telegram { 
-      background: #0f172a; 
-      color: #38bdf8; 
-      border: 1.5px solid #38bdf8; 
-      box-shadow: 0 4px 15px rgba(56, 189, 248, 0.15);
-    }
-    .btn-telegram:active { transform: scale(0.97); }
-
-    .btn-whatsapp { 
-      background: #0f172a; 
-      color: #22c55e; 
-      border: 1.5px solid #22c55e; 
-      box-shadow: 0 4px 15px rgba(34, 197, 94, 0.15);
-    }
-    .btn-whatsapp:active { transform: scale(0.97); }
-
-    .btn-youtube { 
-      background: #0f172a; 
-      color: #ef4444; 
-      border: 1.5px solid #ef4444; 
-      box-shadow: 0 4px 15px rgba(239, 68, 68, 0.15);
-    }
-    .btn-youtube:active { transform: scale(0.97); }
+    .btn-primary { background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 50%, #6366f1 100%); color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.25); box-shadow: 0 6px 25px rgba(6, 182, 212, 0.45); }
+    .btn-telegram { background: #0f172a; color: #38bdf8; border: 1.5px solid #38bdf8; }
+    .btn-whatsapp { background: #0f172a; color: #22c55e; border: 1.5px solid #22c55e; }
+    .btn-youtube { background: #0f172a; color: #ef4444; border: 1.5px solid #ef4444; }
 
     .stats-bar { width: 100%; max-width: 480px; display: grid; grid-template-columns: repeat(4, 1fr); text-align: center; padding: 14px 0; border-top: 1px solid rgba(255, 255, 255, 0.08); border-bottom: 1px solid rgba(255, 255, 255, 0.08); margin-bottom: 30px; background: rgba(17, 24, 39, 0.4); border-radius: 16px; }
     .stat-item .num { font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 800; color: #38bdf8; margin-bottom: 2px; }
@@ -108,45 +61,6 @@
     .app-info p { font-size: 13px; color: #94a3b8; line-height: 1.4; }
     .live-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); color: #34d399; font-size: 11px; font-weight: 600; padding: 6px 14px; border-radius: 20px; align-self: flex-start; }
     .live-dot { width: 6px; height: 6px; background-color: #34d399; border-radius: 50%; box-shadow: 0 0 8px #34d399; }
-
-    /* POPUP MODAL STYLES */
-    .modal-overlay {
-      position: fixed;
-      top: 0; left: 0; width: 100%; height: 100%;
-      background: rgba(0, 0, 0, 0.85);
-      backdrop-filter: blur(8px);
-      display: none;
-      justify-content: center;
-      align-items: flex-end;
-      z-index: 999;
-    }
-    .modal-content {
-      background: #0f172a;
-      border: 1px solid rgba(255,255,255,0.15);
-      border-radius: 24px 24px 0 0;
-      width: 100%;
-      max-width: 480px;
-      max-height: 80vh;
-      overflow-y: auto;
-      padding: 24px;
-      box-shadow: 0 -10px 40px rgba(0,0,0,0.5);
-      animation: slideUp 0.3s ease-out;
-    }
-    @keyframes slideUp {
-      from { transform: translateY(100%); }
-      to { transform: translateY(0); }
-    }
-    .modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
-    .modal-title-box { display: flex; align-items: center; gap: 12px; }
-    .modal-logo { width: 38px; height: 38px; border-radius: 10px; object-fit: cover; border: 1px solid rgba(255,255,255,0.15); }
-    .modal-title-box h3 { font-family: 'Syne', sans-serif; font-size: 20px; font-weight: 800; color: #ffffff; }
-    .close-btn { background: rgba(255,255,255,0.1); border: none; color: #fff; width: 32px; height: 32px; border-radius: 50%; font-size: 16px; cursor: pointer; }
-    
-    .batch-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 15px; }
-    .batch-card { background: #1e293b; border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; color: #fff; text-decoration: none; overflow: hidden; display: flex; flex-direction: column; align-items: center; transition: transform 0.2s ease; }
-    .batch-card:active { transform: scale(0.97); }
-    .batch-card img { width: 100%; height: 100px; object-fit: cover; border-bottom: 1px solid rgba(255,255,255,0.1); }
-    .batch-card span { padding: 8px 6px; font-size: 12px; font-weight: 600; text-align: center; }
   </style>
 </head>
 <body>
@@ -154,22 +68,17 @@
   <nav class="navbar">
     <a href="#" class="nav-brand">
       <img src="ChatGPT Image Aug 12, 2026, 08_08_06 AM.png" alt="Logo" class="nav-logo-img">
-      <span class="nav-title">RAJNISH PRIME</span>
+      <span class="nav-title">RAJNISH PRIME DIGITAL LIBRARY</span>
     </a>
-    <div class="menu-btn" onclick="vibratePhone(30)">
-      <span></span><span></span><span></span>
-    </div>
+    <div class="menu-btn" onclick="vibratePhone(30)"><span></span><span></span><span></span></div>
   </nav>
 
   <header class="hero">
-    <div class="pill-badge">
-      <span class="dot"></span> 100% Free • Premium Courses Unlocked
-    </div>
-    <h1>Study Smarter. Pay <span>Nothing.</span></h1>
-    <p>Access premium paid courses from India's top ed-tech platforms — completely free. All your favourite educators, one place.</p>
-    
+    <div class="pill-badge"><span class="dot"></span> 100% Free • E-Books & Study Material</div>
+    <h1>Read Smarter. Pay <span>Nothing.</span></h1>
+    <p>Access free e-books, study materials, and premium courses from India's top educational platforms — all in one place.</p>
     <div class="btn-group">
-      <a href="#apps" class="btn btn-primary" onclick="vibratePhone(40)">🚀 Explore Apps</a>
+      <a href="#apps" class="btn btn-primary" onclick="vibratePhone(40)">📚 Explore E-Books & Apps</a>
       <a href="https://t.me/freestudybach2027" class="btn btn-telegram" onclick="vibratePhone(40)">✈️ Join Telegram Channel</a>
       <a href="https://whatsapp.com/channel/0029VbDI4yFK5cDHjEHcNk16" class="btn btn-whatsapp" onclick="vibratePhone(40)">📢 Join WhatsApp Channel</a>
       <a href="https://youtube.com/@rajnishstudyshorts?si=mPxFar33SZb9pHjA" class="btn btn-youtube" onclick="vibratePhone(40)">📺 Subscribe YouTube</a>
@@ -177,7 +86,7 @@
   </header>
 
   <div class="stats-bar">
-    <div class="stat-item"><div class="num">1000+</div><div class="label">Batches</div></div>
+    <div class="stat-item"><div class="num">1000+</div><div class="label">E-Books</div></div>
     <div class="stat-item"><div class="num">10</div><div class="label">Platforms</div></div>
     <div class="stat-item"><div class="num">₹0</div><div class="label">Cost</div></div>
     <div class="stat-item"><div class="num">24/7</div><div class="label">Access</div></div>
@@ -185,17 +94,77 @@
 
   <div class="section-container" id="apps">
     <p class="section-tag">Official Platforms</p>
-    <h2 class="section-title">Explore Our Apps</h2>
-    <p class="section-desc">Pick your platform and get instant free access to all premium batches.</p>
+    <h2 class="section-title">Explore E-Books & Apps</h2>
+    <p class="section-desc">Pick your platform and get instant free access to all premium materials & e-books.</p>
 
     <div class="apps-list">
       <!-- Physics Wallah -->
       <a href="viewer.html" target="_blank" class="app-card" onclick="vibratePhone(35)">
         <div class="app-card-top">
           <img src="pw1.png" alt="Physics Wallah" class="app-icon">
+          <div class="app-info"><h3>Physics Wallah</h3><p>Master Physics concepts with high-quality free lectures, e-books, and notes.</p></div>
+        </div>
+        <div class="live-badge"><span class="live-dot"></span> LIVE BATCHES AVAILABLE</div>
+      </a>
+
+      <!-- Vibrant Academy -->
+      <a href="https://nexthope.pages.dev/vb/" target="_blank" class="app-card" onclick="vibratePhone(35)">
+        <div class="app-card-top">
+          <img src="https://nexthope.pages.dev/favicon.ico" alt="Vibrant Academy" class="app-icon">
+          <div class="app-info"><h3>Vibrant Academy</h3><p>Access free JEE & competitive exam e-books, lectures, and study materials.</p></div>
+        </div>
+        <div class="live-badge"><span class="live-dot"></span> LIVE BATCHES AVAILABLE</div>
+      </a>
+
+      <!-- Unc Offline -->
+      <a href="https://nexthope.pages.dev/uncoffline/" target="_blank" class="app-card" onclick="vibratePhone(35)">
+        <div class="app-card-top">
+          <img src="https://i.ibb.co/NdK48RqM/Screenshot-20260811-183136-2.jpg" alt="Unc Offline" class="app-icon">
+          <div class="app-info"><h3>Unc Offline</h3><p>Access offline batch resources, e-books, and exclusive study materials.</p></div>
+        </div>
+        <div class="live-badge"><span class="live-dot"></span> LIVE BATCHES AVAILABLE</div>
+      </a>
+
+      <!-- GS Vision -->
+      <a href="https://nexthope.pages.dev/gsvision/" target="_blank" class="app-card" onclick="vibratePhone(35)">
+        <div class="app-card-top">
+          <img src="https://nexthope.pages.dev/favicon.ico" alt="GS Vision" class="app-icon">
+          <div class="app-info"><h3>GS Vision</h3><p>Visual learning hub built for clarity, speed, and digital reading access.</p></div>
+        </div>
+        <div class="live-badge"><span class="live-dot"></span> LIVE BATCHES AVAILABLE</div>
+      </a>
+
+      <!-- Toppers Wisdom -->
+      <a href="https://nexthope.pages.dev/tw/" target="_blank" class="app-card" onclick="vibratePhone(35)">
+        <div class="app-card-top">
+          <img src="https://nexthope.pages.dev/favicon.ico" alt="Toppers Wisdom" class="app-icon">
           <div class="app-info">
-            <h3>Physics Wallah</h3>
-            <p>Master Physics concepts with high-quality free lectures and notes.</p>
+            <h3>Toppers Wisdom</h3>
+            <p>Access targeted study resources, e-books, and exclusive course batches.</p>
+          </div>
+        </div>
+        <div class="live-badge"><span class="live-dot"></span> LIVE BATCHES AVAILABLE</div>
+      </a>
+
+      <!-- Futurekul -->
+      <a href="https://nexthope.pages.dev/futurekul/" target="_blank" class="app-card" onclick="vibratePhone(35)">
+        <div class="app-card-top">
+          <img src="https://nexthope.pages.dev/favicon.ico" alt="Futurekul" class="app-icon">
+          <div class="app-info">
+            <h3>Futurekul</h3>
+            <p>Empowering competitive exam preparation with premium free lectures & e-books.</p>
+          </div>
+        </div>
+        <div class="live-badge"><span class="live-dot"></span> LIVE BATCHES AVAILABLE</div>
+      </a>
+
+      <!-- Pinnacle -->
+      <a href="https://nexthope.pages.dev/pinnacle/" target="_blank" class="app-card" onclick="vibratePhone(35)">
+        <div class="app-card-top">
+          <img src="https://nexthope.pages.dev/favicon.ico" alt="Pinnacle" class="app-icon">
+          <div class="app-info">
+            <h3>Pinnacle</h3>
+            <p>Top-notch preparation modules and comprehensive e-book content.</p>
           </div>
         </div>
         <div class="live-badge"><span class="live-dot"></span> LIVE BATCHES AVAILABLE</div>
@@ -205,150 +174,20 @@
       <div class="app-card" onclick="vibratePhone(35); openBatchesModal();">
         <div class="app-card-top">
           <img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg" alt="Next Toppers" class="app-icon">
-          <div class="app-info">
-            <h3>Next Toppers</h3>
-            <p>Crack competitive exams with high-quality free video lectures and notes.</p>
-          </div>
+          <div class="app-info"><h3>Next Toppers</h3><p>Crack competitive exams with high-quality free video lectures, e-books, and notes.</p></div>
         </div>
         <div class="live-badge"><span class="live-dot"></span> LIVE BATCHES AVAILABLE</div>
       </div>
-
-      <!-- Khan Global Studies -->
-      <a href="https://khanglobal.vercel.app" target="_blank" class="app-card" onclick="vibratePhone(35)">
-        <div class="app-card-top">
-          <img src="https://i.ibb.co/n8VR15xG/Screenshot-20260815-104329-2.jpg" alt="Khan Global Studies" class="app-icon">
-          <div class="app-info">
-            <h3>Khan Global Studies</h3>
-            <p>Access high-quality UPSC, State PSC, and competitive exam courses.</p>
-          </div>
-        </div>
-        <div class="live-badge"><span class="live-dot"></span> LIVE BATCHES AVAILABLE</div>
-      </a>
-
-      <!-- Mission JEET -->
-      <a href="https://studypanda.live/missionjeet" class="app-card" onclick="vibratePhone(35)">
-        <div class="app-card-top">
-          <img src="https://i.ibb.co/G4kQkcTh/Screenshot-20260811-183043-2.jpg" alt="Mission JEET" class="app-icon">
-          <div class="app-info">
-            <h3>Mission JEET</h3>
-            <p>Ace JEE exams with expert strategy, practice and detailed solutions.</p>
-          </div>
-        </div>
-        <div class="live-badge"><span class="live-dot"></span> LIVE BATCHES AVAILABLE</div>
-      </a>
-
-      <!-- Unacademy -->
-      <a href="https://studypanda.live/una" class="app-card" onclick="vibratePhone(35)">
-        <div class="app-card-top">
-          <img src="https://i.ibb.co/NdK48RqM/Screenshot-20260811-183136-2.jpg" alt="Unacademy" class="app-icon">
-          <div class="app-info">
-            <h3>Unacademy</h3>
-            <p>Learn from India's top educators across different subjects and exams.</p>
-          </div>
-        </div>
-        <div class="live-badge"><span class="live-dot"></span> LIVE BATCHES AVAILABLE</div>
-      </a>
-
-      <!-- Rwa -->
-      <a href="https://studypanda.live/rwa" class="app-card" onclick="vibratePhone(35)">
-        <div class="app-card-top">
-          <img src="https://i.ibb.co/wh5CY8Ds/Screenshot-20260811-183211-2.jpg" alt="Rwa" class="app-icon">
-          <div class="app-info">
-            <h3>Rwa</h3>
-            <p>Your companion for govt. job preparation and exam guidance.</p>
-          </div>
-        </div>
-        <div class="live-badge"><span class="live-dot"></span> LIVE BATCHES AVAILABLE</div>
-      </a>
-
-      <!-- Selection Way -->
-      <a href="https://selectionwayy.vercel.app" class="app-card" onclick="vibratePhone(35)">
-        <div class="app-card-top">
-          <img src="https://i.ibb.co/nMk354fp/logo.png" alt="Selection Way" class="app-icon">
-          <div class="app-info">
-            <h3>Selection Way</h3>
-            <p>Smart way to prepare for competitive exams with clear concepts.</p>
-          </div>
-        </div>
-        <div class="live-badge"><span class="live-dot"></span> LIVE BATCHES AVAILABLE</div>
-      </a>
-
-      <!-- Selection Way Test -->
-      <a href="https://testrankingfree.vercel.app" target="_blank" class="app-card" onclick="vibratePhone(35)">
-        <div class="app-card-top">
-          <img src="https://i.ibb.co/zTJ5rK7B/Screenshot-20260815-105406-2.jpg" alt="Selection Way Test" class="app-icon">
-          <div class="app-info">
-            <h3>Selection Way Test</h3>
-            <p>Take free tests and check your rank and performance level.</p>
-          </div>
-        </div>
-        <div class="live-badge"><span class="live-dot"></span> LIVE TESTS AVAILABLE</div>
-      </a>
-
-      <!-- StudyIQ -->
-      <a href="https://studyiqq.vercel.app" target="_blank" class="app-card" onclick="vibratePhone(35)">
-        <div class="app-card-top">
-          <img src="https://i.ibb.co/xtbYS0QW/Screenshot-20260815-111056-2.jpg" alt="StudyIQ" class="app-icon">
-          <div class="app-info">
-            <h3>StudyIQ</h3>
-            <p>Comprehensive preparation resources and courses for civil services and exams.</p>
-          </div>
-        </div>
-        <div class="live-badge"><span class="live-dot"></span> LIVE BATCHES AVAILABLE</div>
-      </a>
-
-      <!-- CDS Journey -->
-      <a href="https://cdsjourneyy.vercel.app/" target="_blank" class="app-card" onclick="vibratePhone(35)">
-        <div class="app-card-top">
-          <img src="https://i.ibb.co/qLTDWYWj/Screenshot-20260815-111326-2.jpg" alt="CDS Journey" class="app-icon">
-          <div class="app-info">
-            <h3>CDS Journey</h3>
-            <p>Dedicated defense exam preparation resources, strategy and batches.</p>
-          </div>
-        </div>
-        <div class="live-badge"><span class="live-dot"></span> LIVE BATCHES AVAILABLE</div>
-      </a>
-    </div>
-  </div>
-
-  <!-- BATCHES POPUP MODAL -->
-  <div class="modal-overlay" id="batchModal">
-    <div class="modal-content">
-      <div class="modal-header">
-        <div class="modal-title-box">
-          <img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg" alt="Next Toppers Logo" class="modal-logo">
-          <h3>Next Toppers Batches</h3>
-        </div>
-        <button class="close-btn" onclick="vibratePhone(20); closeBatchesModal();">✕</button>
-      </div>
-      <p style="color: #94a3b8; font-size: 13px;">Select your batch to start studying directly:</p>
       
-      <div class="batch-grid">
-        <a href="https://studypanda.live/nexttoppers/197" class="batch-card" onclick="vibratePhone(25)"><img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg"><span>NIRMAAN : CLASS 7</span></a>
-        <a href="https://studypanda.live/nexttoppers/193" class="batch-card" onclick="vibratePhone(25)"><img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg"><span>NIRMAAN 2.0 BATCH</span></a>
-        <a href="https://studypanda.live/nexttoppers/192" class="batch-card" onclick="vibratePhone(25)"><img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg"><span>IOQM + NSEJS + SEHSS</span></a>
-        <a href="https://studypanda.live/nexttoppers/191" class="batch-card" onclick="vibratePhone(25)"><img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg"><span>NSEJS + SEHSS CRASH</span></a>
-        <a href="https://studypanda.live/nexttoppers/190" class="batch-card" onclick="vibratePhone(25)"><img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg"><span>IOQM - CRASH COURSE</span></a>
-        <a href="https://studypanda.live/nexttoppers/188" class="batch-card" onclick="vibratePhone(25)"><img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg"><span>NTSAT CLASS 8th</span></a>
-        <a href="https://studypanda.live/nexttoppers" class="batch-card" onclick="vibratePhone(25)" style="border-color: #06b6d4; justify-content: center; background: rgba(6, 182, 212, 0.1); grid-column: span 2;"><span style="color: #38bdf8; font-size: 14px; font-weight: 700; padding: 20px 0;">All Batches ➔</span></a>
-      </div>
     </div>
   </div>
 
   <script>
-    function vibratePhone(duration) {
-      if ("vibrate" in navigator) {
-        navigator.vibrate(duration);
-      }
-    }
-
-    function openBatchesModal() {
-      document.getElementById('batchModal').style.display = 'flex';
-    }
-    function closeBatchesModal() {
-      document.getElementById('batchModal').style.display = 'none';
-    }
+    function vibratePhone(duration) { if ("vibrate" in navigator) { navigator.vibrate(duration); } }
+    function openBatchesModal() { document.getElementById('batchModal').style.display = 'flex'; }
+    function closeBatchesModal() { document.getElementById('batchModal').style.display = 'none'; }
   </script>
 
 </body>
 </html>
+
