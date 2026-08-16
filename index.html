@@ -8,7 +8,7 @@
     <!-- Modern Font Setup -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Plus+Jakarta+Sans:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet">
 
     <style>
         * {
@@ -54,18 +54,179 @@
             box-shadow: 0 8px 30px rgba(99, 102, 241, 0.45); 
             transition: transform 0.2s, box-shadow 0.2s;
             display: inline-block;
+            cursor: pointer;
+            border: none;
         }
 
         .open-btn:active {
             transform: scale(0.95);
             box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
         }
+
+        /* OVERLAY MODAL STYLES (EXACT SCREENSHOT MATCH) */
+        .modal-overlay {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(8px);
+            display: none; /* Initially Hidden */
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            padding: 20px;
+        }
+
+        .popup-card {
+            background: #0d1520;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 28px;
+            padding: 32px 24px;
+            width: 100%;
+            max-width: 360px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+            animation: popIn 0.3s ease-out;
+        }
+
+        @keyframes popIn {
+            from { transform: scale(0.85); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 16px; right: 16px;
+            background: rgba(255,255,255,0.08);
+            border: none;
+            color: #94a3b8;
+            width: 32px; height: 32px;
+            border-radius: 50%;
+            font-size: 18px;
+            cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+        }
+
+        .popup-icon-box {
+            width: 80px; height: 80px;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            border-radius: 24px;
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 20px auto;
+            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.35);
+        }
+
+        .popup-icon-box svg {
+            width: 42px; height: 42px;
+            fill: none;
+            stroke: #ffffff;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .popup-card h2 {
+            font-family: 'Syne', sans-serif;
+            font-size: 24px;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+
+        .popup-card p {
+            font-size: 14px;
+            color: #94a3b8;
+            line-height: 1.5;
+            margin-bottom: 24px;
+            font-weight: 500;
+        }
+
+        .btn-popup-join {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: #ffffff;
+            border: none;
+            border-radius: 16px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn-popup-join:active {
+            transform: scale(0.97);
+        }
     </style>
 </head>
 <body>
 
     <h1 class="brand-title">RAJNISH PRIME</h1>
-    <a href="app.html" class="open-btn">🔥 Open Now 🔥</a>
+    
+    <!-- Trigger Button -->
+    <button class="open-btn" onclick="handleOpenNow()">🔥 Open Now 🔥</button>
+
+    <!-- POPUP MODAL -->
+    <div class="modal-overlay" id="joinModal">
+        <div class="popup-card">
+            <button class="close-btn" onclick="closeModal()">&times;</button>
+            <div class="popup-icon-box">
+                <svg viewBox="0 0 24 24">
+                    <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"></path>
+                </svg>
+            </div>
+            <h2>Join Community!</h2>
+            <p>Instant access to notes, latest updates, and direct support.</p>
+            <button class="btn-popup-join" onclick="joinTelegramAndUnlock()">
+                JOIN TELEGRAM 
+                <svg width="18" height="18" viewBox="0 0 24 24" style="stroke: #fff;">
+                    <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        const targetPage = 'app.html';
+        const tgChannelLink = 'https://t.me/+g0wmAK8VCGEwMTJl'; // Aapka Telegram Link
+
+        function handleOpenNow() {
+            // Check karta hai ki user ne Telegram pehle join kiya hai ya nahi
+            const hasJoined = localStorage.getItem('tgJoined');
+
+            if (hasJoined === 'true') {
+                // Agar pehle se joined hai to seedhe app.html par chala jayega
+                window.location.href = targetPage;
+            } else {
+                // Agar joined nahi hai to popup modal dikhayega
+                document.getElementById('joinModal').style.display = 'flex';
+            }
+        }
+
+        function joinTelegramAndUnlock() {
+            // Telegram channel open karega
+            window.open(tgChannelLink, '_blank');
+
+            // Browser memory me save karega ki user ne join kar liya
+            localStorage.setItem('tgJoined', 'true');
+
+            // Popup close karega aur app.html par redirect karega
+            closeModal();
+            setTimeout(() => {
+                window.location.href = targetPage;
+            }, 500);
+        }
+
+        function closeModal() {
+            document.getElementById('joinModal').style.display = 'none';
+        }
+    </script>
 
 </body>
 </html>
