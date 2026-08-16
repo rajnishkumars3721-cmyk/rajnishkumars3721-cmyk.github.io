@@ -53,7 +53,7 @@
     .hero p { color: #94a3b8; font-size: 13px; line-height: 1.5; margin-bottom: 18px; padding: 0 10px; }
 
     .btn-group { display: flex; flex-direction: column; gap: 12px; margin-bottom: 30px; }
-    .btn { width: 100%; padding: 14px; border-radius: 14px; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 15px; font-weight: 700; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 10px; transition: all 0.3s ease; }
+    .btn { width: 100%; padding: 14px; border-radius: 14px; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 15px; font-weight: 700; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 10px; transition: all 0.3s ease; cursor: pointer; }
     
     .btn-primary { 
       background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 50%, #6366f1 100%); 
@@ -120,7 +120,7 @@
     .close-btn { background: rgba(255,255,255,0.1); border: none; color: #fff; width: 32px; height: 32px; border-radius: 50%; font-size: 16px; cursor: pointer; }
     
     .batch-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 15px; }
-    .batch-card { background: #1e293b; border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; color: #fff; text-decoration: none; overflow: hidden; display: flex; flex-direction: column; align-items: center; transition: transform 0.2s ease; }
+    .batch-card { background: #1e293b; border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; color: #fff; text-decoration: none; overflow: hidden; display: flex; flex-direction: column; align-items: center; transition: transform 0.2s ease; cursor: pointer; }
     .batch-card img { width: 100%; height: 100px; object-fit: cover; border-bottom: 1px solid rgba(255,255,255,0.1); }
     .batch-card span { padding: 8px 6px; font-size: 12px; font-weight: 600; text-align: center; }
   </style>
@@ -145,10 +145,10 @@
     <p>Access premium paid courses from India's top ed-tech platforms — completely free. All your favourite educators, one place.</p>
     
     <div class="btn-group">
-      <a href="#apps" class="btn btn-primary" onclick="vibratePhone(40)">🚀 Explore Apps</a>
-      <a href="https://t.me/+g0wmAK8VCGEwMTJl" class="btn btn-telegram" onclick="vibratePhone(40)">✈️ Join Telegram Channel</a>
-      <a href="https://whatsapp.com/channel/0029VbDI4yFK5cDHjEHcNk16" class="btn btn-whatsapp" onclick="vibratePhone(40)">📢 Join WhatsApp Channel</a>
-      <a href="https://youtube.com/@rajnishstudyshorts?si=mPxFar33SZb9pHjA" class="btn btn-youtube" onclick="vibratePhone(40)">📺 Subscribe YouTube</a>
+      <a href="javascript:void(0)" class="btn btn-primary" onclick="checkAndOpenLink(event, '#apps', false)">🚀 Explore Apps</a>
+      <a href="https://t.me/+g0wmAK8VCGEwMTJl" target="_blank" class="btn btn-telegram" onclick="markTGJoined(); vibratePhone(40)">✈️ Join Telegram Channel</a>
+      <a href="https://whatsapp.com/channel/0029VbDI4yFK5cDHjEHcNk16" target="_blank" class="btn btn-whatsapp" onclick="markWAJoined(); vibratePhone(40)">📢 Join WhatsApp Channel</a>
+      <a href="https://youtube.com/@rajnishstudyshorts?si=mPxFar33SZb9pHjA" target="_blank" class="btn btn-youtube" onclick="vibratePhone(40)">📺 Subscribe YouTube</a>
     </div>
   </header>
 
@@ -166,7 +166,7 @@
 
     <div class="apps-list">
       <!-- 1. Physics Wallah -->
-      <a href="viewer.html" target="_blank" class="app-card" onclick="vibratePhone(35)">
+      <div class="app-card" onclick="checkAndOpenLink(event, 'viewer.html', true)">
         <div class="app-card-top">
           <img src="pw1.png" alt="Physics Wallah" class="app-icon">
           <div class="app-info">
@@ -175,10 +175,10 @@
           </div>
         </div>
         <div class="live-badge"><span class="live-dot"></span> LIVE BATCHES AVAILABLE</div>
-      </a>
+      </div>
 
       <!-- 2. NEXT TOPPERS -->
-      <div class="app-card" onclick="vibratePhone(35); openBatchesModal();">
+      <div class="app-card" onclick="checkAndOpenModal(event)">
         <div class="app-card-top">
           <img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg" alt="Next Toppers" class="app-icon">
           <div class="app-info">
@@ -190,7 +190,7 @@
       </div>
 
       <!-- 3. Khan Global Studies -->
-      <a href="https://khanglobal.vercel.app" target="_blank" class="app-card" onclick="vibratePhone(35)">
+      <div class="app-card" onclick="checkAndOpenLink(event, 'https://khanglobal.vercel.app', true)">
         <div class="app-card-top">
           <img src="https://i.ibb.co/n8VR15xG/Screenshot-20260815-104329-2.jpg" alt="Khan Global Studies" class="app-icon">
           <div class="app-info">
@@ -199,10 +199,10 @@
           </div>
         </div>
         <div class="live-badge"><span class="live-dot"></span> LIVE BATCHES AVAILABLE</div>
-      </a>
+      </div>
 
       <!-- 4. Mission JEET -->
-      <a href="https://studypanda.live/missionjeet" target="_blank" class="app-card" onclick="vibratePhone(35)">
+      <div class="app-card" onclick="checkAndOpenLink(event, 'https://studypanda.live/missionjeet', true)">
         <div class="app-card-top">
           <img src="https://i.ibb.co/G4kQkcTh/Screenshot-20260811-183043-2.jpg" alt="Mission JEET" class="app-icon">
           <div class="app-info">
@@ -211,10 +211,10 @@
           </div>
         </div>
         <div class="live-badge"><span class="live-dot"></span> LIVE BATCHES AVAILABLE</div>
-      </a>
+      </div>
 
       <!-- 5. Unacademy -->
-      <a href="https://studypanda.live/una" target="_blank" class="app-card" onclick="vibratePhone(35)">
+      <div class="app-card" onclick="checkAndOpenLink(event, 'https://studypanda.live/una', true)">
         <div class="app-card-top">
           <img src="https://i.ibb.co/NdK48RqM/Screenshot-20260811-183136-2.jpg" alt="Unacademy" class="app-icon">
           <div class="app-info">
@@ -223,10 +223,10 @@
           </div>
         </div>
         <div class="live-badge"><span class="live-dot"></span> LIVE BATCHES AVAILABLE</div>
-      </a>
+      </div>
 
       <!-- 6. Rwa -->
-      <a href="https://studypanda.live/rwa" target="_blank" class="app-card" onclick="vibratePhone(35)">
+      <div class="app-card" onclick="checkAndOpenLink(event, 'https://studypanda.live/rwa', true)">
         <div class="app-card-top">
           <img src="https://i.ibb.co/wh5CY8Ds/Screenshot-20260811-183211-2.jpg" alt="Rwa" class="app-icon">
           <div class="app-info">
@@ -235,10 +235,10 @@
           </div>
         </div>
         <div class="live-badge"><span class="live-dot"></span> LIVE BATCHES AVAILABLE</div>
-      </a>
+      </div>
 
       <!-- 7. Selection Way -->
-      <a href="https://selectionwayy.vercel.app" target="_blank" class="app-card" onclick="vibratePhone(35)">
+      <div class="app-card" onclick="checkAndOpenLink(event, 'https://selectionwayy.vercel.app', true)">
         <div class="app-card-top">
           <img src="https://i.ibb.co/nMk354fp/logo.png" alt="Selection Way" class="app-icon">
           <div class="app-info">
@@ -247,10 +247,10 @@
           </div>
         </div>
         <div class="live-badge"><span class="live-dot"></span> LIVE BATCHES AVAILABLE</div>
-      </a>
+      </div>
 
       <!-- 8. Selection Way Test -->
-      <a href="https://testrankingfree.vercel.app" target="_blank" class="app-card" onclick="vibratePhone(35)">
+      <div class="app-card" onclick="checkAndOpenLink(event, 'https://testrankingfree.vercel.app', true)">
         <div class="app-card-top">
           <img src="https://i.ibb.co/zTJ5rK7B/Screenshot-20260815-105406-2.jpg" alt="Selection Way Test" class="app-icon">
           <div class="app-info">
@@ -259,10 +259,10 @@
           </div>
         </div>
         <div class="live-badge"><span class="live-dot"></span> LIVE TESTS AVAILABLE</div>
-      </a>
+      </div>
 
       <!-- 9. StudyIQ -->
-      <a href="https://studyiqq.vercel.app" target="_blank" class="app-card" onclick="vibratePhone(35)">
+      <div class="app-card" onclick="checkAndOpenLink(event, 'https://studyiqq.vercel.app', true)">
         <div class="app-card-top">
           <img src="https://i.ibb.co/xtbYS0QW/Screenshot-20260815-111056-2.jpg" alt="StudyIQ" class="app-icon">
           <div class="app-info">
@@ -271,10 +271,10 @@
           </div>
         </div>
         <div class="live-badge"><span class="live-dot"></span> LIVE BATCHES AVAILABLE</div>
-      </a>
+      </div>
 
       <!-- 10. CDS Journey -->
-      <a href="https://cdsjourneyy.vercel.app/" target="_blank" class="app-card" onclick="vibratePhone(35)">
+      <div class="app-card" onclick="checkAndOpenLink(event, 'https://cdsjourneyy.vercel.app/', true)">
         <div class="app-card-top">
           <img src="https://i.ibb.co/qLTDWYWj/Screenshot-20260815-111326-2.jpg" alt="CDS Journey" class="app-icon">
           <div class="app-info">
@@ -283,10 +283,10 @@
           </div>
         </div>
         <div class="live-badge"><span class="live-dot"></span> LIVE BATCHES AVAILABLE</div>
-      </a>
+      </div>
 
-      <!-- 11. Vibrant Academy (UPDATED NAME) -->
-      <a href="https://nexthope.pages.dev/vb/" target="_blank" class="app-card" onclick="vibratePhone(35)">
+      <!-- 11. Vibrant Academy -->
+      <div class="app-card" onclick="checkAndOpenLink(event, 'https://nexthope.pages.dev/vb/', true)">
         <div class="app-card-top">
           <img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg" alt="Vibrant Academy" class="app-icon">
           <div class="app-info">
@@ -295,10 +295,10 @@
           </div>
         </div>
         <div class="live-badge"><span class="live-dot"></span> LIVE BATCHES AVAILABLE</div>
-      </a>
+      </div>
 
       <!-- 12. UNCOFFLINE -->
-      <a href="https://nexthope.pages.dev/uncoffline/" target="_blank" class="app-card" onclick="vibratePhone(35)">
+      <div class="app-card" onclick="checkAndOpenLink(event, 'https://nexthope.pages.dev/uncoffline/', true)">
         <div class="app-card-top">
           <img src="https://i.ibb.co/NdK48RqM/Screenshot-20260811-183136-2.jpg" alt="UNCOFFLINE" class="app-icon">
           <div class="app-info">
@@ -307,10 +307,10 @@
           </div>
         </div>
         <div class="live-badge"><span class="live-dot"></span> LIVE BATCHES AVAILABLE</div>
-      </a>
+      </div>
 
       <!-- 13. GS Vision -->
-      <a href="https://nexthope.pages.dev/gsvision/" target="_blank" class="app-card" onclick="vibratePhone(35)">
+      <div class="app-card" onclick="checkAndOpenLink(event, 'https://nexthope.pages.dev/gsvision/', true)">
         <div class="app-card-top">
           <img src="https://i.ibb.co/YF3vNsnh/Screenshot-20260815-171317-2.jpg" alt="GS Vision" class="app-icon">
           <div class="app-info">
@@ -319,10 +319,10 @@
           </div>
         </div>
         <div class="live-badge"><span class="live-dot"></span> LIVE BATCHES AVAILABLE</div>
-      </a>
+      </div>
 
       <!-- 14. Toppers' Wisdom -->
-      <a href="https://nexthope.pages.dev/tw/" target="_blank" class="app-card" onclick="vibratePhone(35)">
+      <div class="app-card" onclick="checkAndOpenLink(event, 'https://nexthope.pages.dev/tw/', true)">
         <div class="app-card-top">
           <img src="https://i.ibb.co/F4GJ92dp/Screenshot-20260815-171405-2.jpg" alt="Toppers Wisdom" class="app-icon">
           <div class="app-info">
@@ -331,10 +331,10 @@
           </div>
         </div>
         <div class="live-badge"><span class="live-dot"></span> LIVE BATCHES AVAILABLE</div>
-      </a>
+      </div>
 
       <!-- 15. FutureKul Courses -->
-      <a href="https://nexthope.pages.dev/futurekul/" target="_blank" class="app-card" onclick="vibratePhone(35)">
+      <div class="app-card" onclick="checkAndOpenLink(event, 'https://nexthope.pages.dev/futurekul/', true)">
         <div class="app-card-top">
           <img src="https://i.ibb.co/N2DYywGW/Screenshot-20260815-171520-2.jpg" alt="FutureKul Courses" class="app-icon">
           <div class="app-info">
@@ -343,10 +343,10 @@
           </div>
         </div>
         <div class="live-badge"><span class="live-dot"></span> LIVE BATCHES AVAILABLE</div>
-      </a>
+      </div>
 
       <!-- 16. Pinnacle Ebooks -->
-      <a href="https://nexthope.pages.dev/pinnacle/" target="_blank" class="app-card" onclick="vibratePhone(35)">
+      <div class="app-card" onclick="checkAndOpenLink(event, 'https://nexthope.pages.dev/pinnacle/', true)">
         <div class="app-card-top">
           <img src="https://i.ibb.co/jPgCZGMR/Screenshot-20260815-171712-2.jpg" alt="Pinnacle Ebooks" class="app-icon">
           <div class="app-info">
@@ -355,7 +355,7 @@
           </div>
         </div>
         <div class="live-badge"><span class="live-dot"></span> E-BOOKS AVAILABLE</div>
-      </a>
+      </div>
 
     </div>
   </div>
@@ -368,4 +368,79 @@
           <img src="https://i.ibb.co/xS2ksMk5/Next-Toppers-Logo.jpg" alt="Next Toppers Logo" class="modal-logo">
           <h3>Next Toppers Batches</h3>
         </div>
-        <
+        <button class="close-btn" onclick="closeBatchesModal()">&times;</button>
+      </div>
+      <div class="batch-grid">
+        <a href="nt1.html" class="batch-card" onclick="vibratePhone(35)">
+          <img src="nt1.png" alt="Batch 1">
+          <span>Target Batch</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function vibratePhone(ms) {
+      if (navigator.vibrate) navigator.vibrate(ms);
+    }
+
+    function markTGJoined() {
+      localStorage.setItem('joinedTG', 'true');
+    }
+
+    function markWAJoined() {
+      localStorage.setItem('joinedWA', 'true');
+    }
+
+    function checkAndOpenLink(event, targetUrl, openInNewTab) {
+      vibratePhone(35);
+      const joinedTG = localStorage.getItem('joinedTG');
+      const joinedWA = localStorage.getItem('joinedWA');
+
+      if (!joinedTG) {
+        alert("⚠️ Access unlock karne ke liye pehle Telegram Channel Join karein!");
+        window.open("https://t.me/+g0wmAK8VCGEwMTJl", "_blank");
+        localStorage.setItem('joinedTG', 'true');
+      } else if (!joinedWA) {
+        alert("⚠️ Almost done! Ab WhatsApp Channel Join karein!");
+        window.open("https://whatsapp.com/channel/0029VbDI4yFK5cDHjEHcNk16", "_blank");
+        localStorage.setItem('joinedWA', 'true');
+      } else {
+        if (targetUrl === '#apps') {
+          document.getElementById('apps').scrollIntoView({ behavior: 'smooth' });
+        } else if (openInNewTab) {
+          window.open(targetUrl, '_blank');
+        } else {
+          window.location.href = targetUrl;
+        }
+      }
+    }
+
+    function checkAndOpenModal(event) {
+      vibratePhone(35);
+      const joinedTG = localStorage.getItem('joinedTG');
+      const joinedWA = localStorage.getItem('joinedWA');
+
+      if (!joinedTG || !joinedWA) {
+        checkAndOpenLink(event, '', false);
+      } else {
+        openBatchesModal();
+      }
+    }
+
+    function openBatchesModal() {
+      document.getElementById('batchModal').style.display = 'flex';
+    }
+
+    function closeBatchesModal() {
+      document.getElementById('batchModal').style.display = 'none';
+    }
+
+    function closeBatchesModalOnOverlay(e) {
+      if (e.target.id === 'batchModal') {
+        closeBatchesModal();
+      }
+    }
+  </script>
+</body>
+</html>
