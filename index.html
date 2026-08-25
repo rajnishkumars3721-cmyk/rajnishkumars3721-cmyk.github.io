@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>RAJNISH PRIME 2</title>
     
-    <!-- Modern Font Setup -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#080c14">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet">
@@ -63,14 +65,13 @@
             box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
         }
 
-        /* OVERLAY MODAL STYLES (EXACT SCREENSHOT MATCH) */
         .modal-overlay {
             position: fixed;
             top: 0; left: 0;
             width: 100%; height: 100%;
             background: rgba(0, 0, 0, 0.85);
             backdrop-filter: blur(8px);
-            display: none; /* Initially Hidden */
+            display: none;
             justify-content: center;
             align-items: center;
             z-index: 9999;
@@ -169,10 +170,8 @@
 
     <h1 class="brand-title">RAJNISH PRIME</h1>
     
-    <!-- Trigger Button -->
     <button class="open-btn" onclick="handleOpenNow()">🔥 Open Now 🔥</button>
 
-    <!-- POPUP MODAL -->
     <div class="modal-overlay" id="joinModal">
         <div class="popup-card">
             <button class="close-btn" onclick="closeModal()">&times;</button>
@@ -194,29 +193,20 @@
 
     <script>
         const targetPage = 'app.html';
-        const tgChannelLink = 'https://t.me/+g0wmAK8VCGEwMTJl'; // Aapka Telegram Link
+        const tgChannelLink = 'https://t.me/+g0wmAK8VCGEwMTJl';
 
         function handleOpenNow() {
-            // Check karta hai ki user ne Telegram pehle join kiya hai ya nahi
             const hasJoined = localStorage.getItem('tgJoined');
-
             if (hasJoined === 'true') {
-                // Agar pehle se joined hai to seedhe app.html par chala jayega
                 window.location.href = targetPage;
             } else {
-                // Agar joined nahi hai to popup modal dikhayega
                 document.getElementById('joinModal').style.display = 'flex';
             }
         }
 
         function joinTelegramAndUnlock() {
-            // Telegram channel open karega
             window.open(tgChannelLink, '_blank');
-
-            // Browser memory me save karega ki user ne join kar liya
             localStorage.setItem('tgJoined', 'true');
-
-            // Popup close karega aur app.html par redirect karega
             closeModal();
             setTimeout(() => {
                 window.location.href = targetPage;
@@ -225,6 +215,12 @@
 
         function closeModal() {
             document.getElementById('joinModal').style.display = 'none';
+        }
+
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js');
+            });
         }
     </script>
 
