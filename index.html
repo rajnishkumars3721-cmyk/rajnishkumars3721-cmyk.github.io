@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>RAJNISH PRIME</title>
     
-    <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#080c14">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet">
@@ -21,7 +18,7 @@
         }
 
         body { 
-            background-color: #080c14; 
+            background-color: #080c14 !important; 
             color: #ffffff; 
             display: flex; 
             flex-direction: column; 
@@ -192,25 +189,22 @@
     </div>
 
     <script>
-        const targetPage = 'app.html';
+        const targetPage = './app.html';
         const tgChannelLink = 'https://t.me/+g0wmAK8VCGEwMTJl';
 
         function handleOpenNow() {
-            const hasJoined = localStorage.getItem('tgJoined');
-            if (hasJoined === 'true') {
-                window.location.href = targetPage;
-            } else {
-                document.getElementById('joinModal').style.display = 'flex';
-            }
+            // Seedhe popup modal display karega
+            document.getElementById('joinModal').style.display = 'flex';
         }
 
         function joinTelegramAndUnlock() {
             window.open(tgChannelLink, '_blank');
-            localStorage.setItem('tgJoined', 'true');
             closeModal();
+            
+            // Telegram open hote hi app.html load karega
             setTimeout(() => {
                 window.location.href = targetPage;
-            }, 500);
+            }, 300);
         }
 
         function closeModal() {
