@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>RAJNISH PRIME 2</title>
+    <title>RAJNISH PRIME</title>
     
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#080c14">
@@ -215,12 +215,6 @@
 
         function closeModal() {
             document.getElementById('joinModal').style.display = 'none';
-        }
-
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('./sw.js');
-            });
         }
     </script>
 
